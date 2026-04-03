@@ -1,0 +1,575 @@
+[
+    {
+      "id": "q1",
+      "type": "multiple_choice_single",
+      "prompt": "What is the main purpose of Lesson 2?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "To fine-tune a model on SAMSum dataset",
+          "isCorrect": false,
+          "feedback": "Incorrect: Fine-tuning comes in later lessons after establishing baseline."
+        },
+        {
+          "id": "b",
+          "text": "To establish baseline performance of a base model before fine-tuning",
+          "isCorrect": true,
+          "feedback": "Correct: The lesson focuses on measuring what the base model can do before any fine-tuning."
+        },
+        {
+          "id": "c",
+          "text": "To compare different models on SAMSum",
+          "isCorrect": false,
+          "feedback": "Incorrect: Only one model (Llama 3.2 1B) is evaluated in this lesson."
+        },
+        {
+          "id": "d",
+          "text": "To deploy a summarization model to production",
+          "isCorrect": false,
+          "feedback": "Incorrect: Deployment is not covered in this lesson."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice_multiple",
+      "prompt": "Why was SAMSum chosen as the dataset for this exercise?",
+      "allowMultiple": true,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It's concrete and measurable with ROUGE metrics",
+          "isCorrect": true,
+          "feedback": "Correct: ROUGE provides a standard way to evaluate summarization quality."
+        },
+        {
+          "id": "b",
+          "text": "It's short and efficient for fast Colab experiments",
+          "isCorrect": true,
+          "feedback": "Correct: The dataset size allows for quick experimentation."
+        },
+        {
+          "id": "c",
+          "text": "It's realistic and mirrors real conversational summarization use cases",
+          "isCorrect": true,
+          "feedback": "Correct: The dialogues represent real-world chat/customer support scenarios."
+        },
+        {
+          "id": "d",
+          "text": "It requires reinforcement learning methods like PPO",
+          "isCorrect": false,
+          "feedback": "Incorrect: SAMSum is a supervised task that doesn't require RL methods."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice_single",
+      "prompt": "What base model is used for the baseline evaluation?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "GPT-4",
+          "isCorrect": false,
+          "feedback": "Incorrect: GPT-4 is evaluated in a later lesson, not this one."
+        },
+        {
+          "id": "b",
+          "text": "Llama 3.2 1B Instruct",
+          "isCorrect": true,
+          "feedback": "Correct: This is Meta's smallest open-weight model chosen for its efficiency."
+        },
+        {
+          "id": "c",
+          "text": "BERT",
+          "isCorrect": false,
+          "feedback": "Incorrect: BERT is not suitable for generative summarization tasks."
+        },
+        {
+          "id": "d",
+          "text": "T5",
+          "isCorrect": false,
+          "feedback": "Incorrect: T5 is not the model chosen for this baseline evaluation."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice_single",
+      "prompt": "What are the three main ROUGE metrics explained in the lesson?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "ROUGE-A, ROUGE-B, ROUGE-C",
+          "isCorrect": false,
+          "feedback": "Incorrect: These are not standard ROUGE metrics."
+        },
+        {
+          "id": "b",
+          "text": "ROUGE-1, ROUGE-2, ROUGE-L",
+          "isCorrect": true,
+          "feedback": "Correct: These measure unigram, bigram, and longest common subsequence overlap respectively."
+        },
+        {
+          "id": "c",
+          "text": "ROUGE-S, ROUGE-SU, ROUGE-W",
+          "isCorrect": false,
+          "feedback": "Incorrect: While these exist, they're not the main ones covered in the lesson."
+        },
+        {
+          "id": "d",
+          "text": "ROUGE-N, ROUGE-L, ROUGE-W",
+          "isCorrect": false,
+          "feedback": "Incorrect: ROUGE-N is a category, not a specific metric like ROUGE-1 and ROUGE-2."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple_choice_single",
+      "prompt": "What does ROUGE-1 measure?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Overlap of two-word sequences (bigrams)",
+          "isCorrect": false,
+          "feedback": "Incorrect: That's ROUGE-2, not ROUGE-1."
+        },
+        {
+          "id": "b",
+          "text": "Overlap of individual words (unigrams)",
+          "isCorrect": true,
+          "feedback": "Correct: ROUGE-1 measures how many key words from the reference appear in the generated summary."
+        },
+        {
+          "id": "c",
+          "text": "Longest common subsequence between summaries",
+          "isCorrect": false,
+          "feedback": "Incorrect: That's ROUGE-L, not ROUGE-1."
+        },
+        {
+          "id": "d",
+          "text": "Skip-bigram co-occurrence statistics",
+          "isCorrect": false,
+          "feedback": "Incorrect: That's ROUGE-S, not covered in this lesson."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple_choice_multiple",
+      "prompt": "What libraries are installed as prerequisites for the baseline evaluation?",
+      "allowMultiple": true,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "transformers",
+          "isCorrect": true,
+          "feedback": "Correct: Provides the Llama 3.2 model, tokenizer, and generation pipeline."
+        },
+        {
+          "id": "b",
+          "text": "datasets",
+          "isCorrect": true,
+          "feedback": "Correct: Handles SAMSum data loading, caching, and sampling."
+        },
+        {
+          "id": "c",
+          "text": "evaluate",
+          "isCorrect": true,
+          "feedback": "Correct: Computes ROUGE and other metrics."
+        },
+        {
+          "id": "d",
+          "text": "accelerate",
+          "isCorrect": true,
+          "feedback": "Correct: Enables efficient multi-device inference."
+        },
+        {
+          "id": "e",
+          "text": "peft",
+          "isCorrect": true,
+          "feedback": "Correct: Supports LoRA/QLoRA (prepared for future lessons)."
+        },
+        {
+          "id": "f",
+          "text": "bitsandbytes",
+          "isCorrect": true,
+          "feedback": "Correct: Optional library for 4-bit quantization (used later)."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple_choice_single",
+      "prompt": "How many samples are used per split in the configuration?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "50",
+          "isCorrect": false,
+          "feedback": "Incorrect: The configuration specifies 200 samples per split."
+        },
+        {
+          "id": "b",
+          "text": "100",
+          "isCorrect": false,
+          "feedback": "Incorrect: The configuration specifies 200 samples per split."
+        },
+        {
+          "id": "c",
+          "text": "200",
+          "isCorrect": true,
+          "feedback": "Correct: The config.yaml sets train: 200, validation: 200, test: 200."
+        },
+        {
+          "id": "d",
+          "text": "1000",
+          "isCorrect": false,
+          "feedback": "Incorrect: The configuration specifies 200 samples per split."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple_choice_single",
+      "prompt": "Given the following function and its caller, how does the `load_and_prepare_dataset` function handle dataset loading and what does it return?\n\n```python\ndef load_and_prepare_dataset(cfg):\n    cfg_dataset = cfg[\"dataset\"]\n    dataset = load_dataset(cfg_dataset[\"name\"])\n    val_key = \"validation\" if \"validation\" in dataset else \"val\"\n\n    train = select_subset(dataset[\"train\"], cfg_dataset[\"splits\"][\"train\"], seed=42)\n    val = select_subset(dataset[val_key], cfg_dataset[\"splits\"][\"validation\"], seed=42)\n    test = select_subset(dataset[\"test\"], cfg_dataset[\"splits\"][\"test\"], seed=42)\n\n    print(f\"📊 Loaded {len(train)} train / {len(val)} val / {len(test)} samples.\")\n    return train, val, test\n\ndef evaluate_baseline():\n    _, val_data, _ = load_and_prepare_dataset(cfg)\n    # ... rest of evaluation\n```",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It downloads the dataset and returns the full dataset without sampling",
+          "isCorrect": false,
+          "feedback": "Incorrect: The function uses select_subset to sample specific numbers of examples."
+        },
+        {
+          "id": "b",
+          "text": "It loads the dataset from Hugging Face, handles different validation split names, and returns sampled subsets",
+          "isCorrect": true,
+          "feedback": "Correct: It loads the full dataset, checks for 'validation' or 'val' split key, and returns sampled subsets based on config."
+        },
+        {
+          "id": "c",
+          "text": "It only loads the validation split and ignores train/test",
+          "isCorrect": false,
+          "feedback": "Incorrect: It loads all three splits (train, validation, test) even if the caller only uses validation."
+        },
+        {
+          "id": "d",
+          "text": "It caches the dataset locally and returns cached versions",
+          "isCorrect": false,
+          "feedback": "Incorrect: While the notebook version does caching, this specific function doesn't show caching logic."
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "multiple_choice_single",
+      "prompt": "Given the following function, how does the `setup_model_and_tokenizer` function configure the tokenizer and why is `pad_token` set to `eos_token`?\n\n```python\ndef setup_model_and_tokenizer(cfg, use_4bit=False, use_lora=False):\n    model_name = cfg[\"base_model\"]\n    tokenizer = AutoTokenizer.from_pretrained(model_name)\n    tokenizer.pad_token = tokenizer.eos_token\n    tokenizer.padding_side = \"right\"\n\n    model = AutoModelForCausalLM.from_pretrained(\n        model_name,\n        device_map=\"auto\",\n        dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,\n    )\n\n    print(\"🔹 Using base model only (no LoRA).\")\n    return model, tokenizer\n```",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It sets pad_token to eos_token to enable generation and prevent padding tokens from affecting output",
+          "isCorrect": true,
+          "feedback": "Correct: Many causal LMs don't have a dedicated pad token, so using eos_token prevents padding from interfering with generation."
+        },
+        {
+          "id": "b",
+          "text": "It sets pad_token to eos_token to make the model generate end-of-sequence tokens",
+          "isCorrect": false,
+          "feedback": "Incorrect: The pad_token setting is for padding during batching, not for generation control."
+        },
+        {
+          "id": "c",
+          "text": "It sets pad_token to eos_token because the tokenizer lacks a pad token completely",
+          "isCorrect": false,
+          "feedback": "Incorrect: While some tokenizers lack pad tokens, the eos_token is used as a substitute, not because it's completely missing."
+        },
+        {
+          "id": "d",
+          "text": "It sets pad_token to eos_token to improve model performance on summarization",
+          "isCorrect": false,
+          "feedback": "Incorrect: This is a technical requirement for batching, not a performance optimization."
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "multiple_choice_single",
+      "prompt": "Given the following function, how does the `generate_predictions` function construct prompts and what generation strategy does it use?\n\n```python\ndef generate_predictions(model, tokenizer, dataset, task_instruction, batch_size=8):\n    prompts = []\n    for sample in dataset:\n        user_prompt = (\n            f\"{task_instruction}\\n\\n\"\n            f\"## Dialogue:\\n{sample['dialogue']}\\n## Summary:\"\n        )\n        messages = [{\"role\": \"user\", \"content\": user_prompt}]\n        prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)\n        prompts.append(prompt)\n\n    pipe = pipeline(\"text-generation\", model=model, tokenizer=tokenizer, do_sample=False)\n    preds = []\n    for i in tqdm(range(0, len(prompts), batch_size), desc=\"Generating summaries\"):\n        batch = prompts[i : i + batch_size]\n        outputs = pipe(batch, max_new_tokens=256, return_full_text=False)\n        preds.extend([o[0][\"generated_text\"].strip() for o in outputs])\n\n    return preds\n```",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It uses greedy decoding (do_sample=False) and formats prompts with chat templates for instruction following",
+          "isCorrect": true,
+          "feedback": "Correct: It constructs instruction-formatted prompts and uses deterministic generation with do_sample=False."
+        },
+        {
+          "id": "b",
+          "text": "It uses sampling with temperature and formats prompts as plain text without templates",
+          "isCorrect": false,
+          "feedback": "Incorrect: It uses do_sample=False (greedy) and applies chat templates."
+        },
+        {
+          "id": "c",
+          "text": "It generates summaries one at a time without batching",
+          "isCorrect": false,
+          "feedback": "Incorrect: It processes prompts in batches for efficiency."
+        },
+        {
+          "id": "d",
+          "text": "It returns the full text including the prompt",
+          "isCorrect": false,
+          "feedback": "Incorrect: return_full_text=False ensures only generated text is returned."
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "multiple_choice_single",
+      "prompt": "Given the following function and its usage in evaluate_baseline, how does the compute_rouge function calculate ROUGE scores and what does it return?\n\n```python\ndef compute_rouge(predictions, samples):\n    rouge = evaluate.load(\"rouge\")\n    references = [s[\"summary\"] for s in samples]\n    return rouge.compute(predictions=predictions, references=references)\n\ndef evaluate_baseline():\n    # ... generate predictions ...\n    scores = compute_rouge(preds, val_data)\n    print(f\"\\n💾 Results:\")\n    print(json.dumps(scores, indent=2))\n    return scores\n```",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It loads the ROUGE metric, extracts reference summaries, and returns a dictionary with ROUGE-1, ROUGE-2, and ROUGE-L scores",
+          "isCorrect": true,
+          "feedback": "Correct: It uses the evaluate library to compute standard ROUGE metrics against reference summaries."
+        },
+        {
+          "id": "b",
+          "text": "It calculates ROUGE scores by comparing predictions against each other",
+          "isCorrect": false,
+          "feedback": "Incorrect: It compares predictions against reference summaries from the dataset."
+        },
+        {
+          "id": "c",
+          "text": "It returns only the average ROUGE score across all metrics",
+          "isCorrect": false,
+          "feedback": "Incorrect: It returns individual scores for ROUGE-1, ROUGE-2, and ROUGE-L."
+        },
+        {
+          "id": "d",
+          "text": "It computes ROUGE scores using custom implementation",
+          "isCorrect": false,
+          "feedback": "Incorrect: It uses the standard evaluate.load('rouge') implementation."
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "multiple_choice_single",
+      "prompt": "What baseline ROUGE scores did Llama 3.2 1B Instruct achieve?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "ROUGE-1: 25.1%, ROUGE-2: 10.0%, ROUGE-L: 20.2%",
+          "isCorrect": false,
+          "feedback": "Incorrect: These scores are lower than the actual baseline results."
+        },
+        {
+          "id": "b",
+          "text": "ROUGE-1: 35.1%, ROUGE-2: 13.0%, ROUGE-L: 27.2%",
+          "isCorrect": true,
+          "feedback": "Correct: These are the baseline performance metrics before any fine-tuning."
+        },
+        {
+          "id": "c",
+          "text": "ROUGE-1: 45.1%, ROUGE-2: 23.0%, ROUGE-L: 37.2%",
+          "isCorrect": false,
+          "feedback": "Incorrect: These scores are higher than the baseline; they might be post-fine-tuning results."
+        },
+        {
+          "id": "d",
+          "text": "ROUGE-1: 15.1%, ROUGE-2: 5.0%, ROUGE-L: 12.2%",
+          "isCorrect": false,
+          "feedback": "Incorrect: These scores are too low for the base model performance."
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "multiple_choice_single",
+      "prompt": "What is the purpose of establishing a baseline before fine-tuning?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "To waste time before starting the real work",
+          "isCorrect": false,
+          "feedback": "Incorrect: The baseline is crucial for measuring improvement."
+        },
+        {
+          "id": "b",
+          "text": "To have a measurable reference point for comparing fine-tuning improvements",
+          "isCorrect": true,
+          "feedback": "Correct: The baseline provides the 'before' snapshot to quantify the benefits of fine-tuning."
+        },
+        {
+          "id": "c",
+          "text": "To test if the model can load at all",
+          "isCorrect": false,
+          "feedback": "Incorrect: While loading is tested, the main purpose is measurement, not just validation."
+        },
+        {
+          "id": "d",
+          "text": "To select the best model for fine-tuning",
+          "isCorrect": false,
+          "feedback": "Incorrect: Only one model is being evaluated; the baseline isn't for model selection."
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "multiple_choice_multiple",
+      "prompt": "What three key benefits does establishing a baseline provide?",
+      "allowMultiple": true,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Performance reality - a measurable, reproducible reference point",
+          "isCorrect": true,
+          "feedback": "Correct: The baseline provides concrete numbers to compare against."
+        },
+        {
+          "id": "b",
+          "text": "Workflow validation - data, inference, and evaluation all wired up correctly",
+          "isCorrect": true,
+          "feedback": "Correct: Running the baseline proves the entire pipeline works."
+        },
+        {
+          "id": "c",
+          "text": "Benchmark foundation - every fine-tuning improvement compared to this",
+          "isCorrect": true,
+          "feedback": "Correct: All future experiments are measured against this baseline."
+        },
+        {
+          "id": "d",
+          "text": "Model selection - helps choose the best model architecture",
+          "isCorrect": false,
+          "feedback": "Incorrect: The baseline doesn't help with model selection; it establishes a starting point."
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "multiple_choice_single",
+      "prompt": "What instruction is used to prompt the model for summarization?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "\"Summarize this conversation in one sentence.\"",
+          "isCorrect": false,
+          "feedback": "Incorrect: This is incomplete; the actual instruction is more detailed."
+        },
+        {
+          "id": "b",
+          "text": "\"You are a helpful assistant who writes concise, factual summaries of conversations. Summarize the following conversation into a single sentence.\"",
+          "isCorrect": true,
+          "feedback": "Correct: This instruction sets the role and specifies the task clearly."
+        },
+        {
+          "id": "c",
+          "text": "\"Please provide a summary of the following dialogue.\"",
+          "isCorrect": false,
+          "feedback": "Incorrect: The actual instruction is more specific about being concise and factual."
+        },
+        {
+          "id": "d",
+          "text": "\"Generate a brief summary of this chat conversation.\"",
+          "isCorrect": false,
+          "feedback": "Incorrect: The actual instruction includes role-setting and specific constraints."
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "multiple_choice_single",
+      "prompt": "Why was Llama 3.2 1B Instruct chosen as the base model?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It's the largest model available for best performance",
+          "isCorrect": false,
+          "feedback": "Incorrect: It's actually the smallest in the Llama 3 family, chosen for efficiency."
+        },
+        {
+          "id": "b",
+          "text": "It's light enough for Colab, supports instruction-following, and shows measurable improvements",
+          "isCorrect": true,
+          "feedback": "Correct: These three factors make it ideal for learning the fine-tuning workflow."
+        },
+        {
+          "id": "c",
+          "text": "It's the only model that works with SAMSum dataset",
+          "isCorrect": false,
+          "feedback": "Incorrect: Many models can work with SAMSum; this was a pedagogical choice."
+        },
+        {
+          "id": "d",
+          "text": "It's free and doesn't require any API keys",
+          "isCorrect": false,
+          "feedback": "Incorrect: While it is open-weight, the primary reasons were efficiency and educational value."
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "multiple_choice_single",
+      "prompt": "What will the next lesson focus on?",
+      "allowMultiple": false,
+      "tags": ["SAMSum Fine-Tuning Project: Establishing Your Baseline Performance", "3_02", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Fine-tuning Llama 3.2 with QLoRA",
+          "isCorrect": false,
+          "feedback": "Incorrect: QLoRA fine-tuning comes in lesson 3_04."
+        },
+        {
+          "id": "b",
+          "text": "Testing OpenAI's 4o-mini and using managed fine-tuning",
+          "isCorrect": true,
+          "feedback": "Correct: The next lesson explores frontier models and managed fine-tuning services."
+        },
+        {
+          "id": "c",
+          "text": "Setting up RunPod cloud GPUs",
+          "isCorrect": false,
+          "feedback": "Incorrect: RunPod setup is covered in lesson 3_04."
+        },
+        {
+          "id": "d",
+          "text": "Integrating Weights & Biases for tracking",
+          "isCorrect": false,
+          "feedback": "Incorrect: W&B integration is introduced in lesson 3_05."
+        }
+      ]
+    }
+  ]

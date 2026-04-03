@@ -1,0 +1,563 @@
+[
+    {
+      "id": "q1",
+      "type": "multiple_choice_single",
+      "prompt": "What is the main focus of Lesson 4?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Using OpenAI's managed fine-tuning API",
+          "isCorrect": false,
+          "feedback": "Incorrect: Managed fine-tuning was covered in lesson 3_03."
+        },
+        {
+          "id": "b",
+          "text": "Building a complete QLoRA training pipeline for Llama 3.2 1B",
+          "isCorrect": true,
+          "feedback": "Correct: This lesson teaches hands-on QLoRA fine-tuning from scratch."
+        },
+        {
+          "id": "c",
+          "text": "Setting up RunPod cloud GPUs",
+          "isCorrect": false,
+          "feedback": "Incorrect: RunPod setup is covered in a later lesson."
+        },
+        {
+          "id": "d",
+          "text": "Integrating Weights & Biases for tracking",
+          "isCorrect": false,
+          "feedback": "Incorrect: W&B integration is covered in a later lesson."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice_multiple",
+      "prompt": "What key concepts are covered in the QLoRA training pipeline?",
+      "allowMultiple": true,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Assistant-only masking for causal language modeling",
+          "isCorrect": true,
+          "feedback": "Correct: This ensures the model learns to generate summaries, not predict user dialogue."
+        },
+        {
+          "id": "b",
+          "text": "4-bit quantization with bitsandbytes",
+          "isCorrect": true,
+          "feedback": "Correct: 4-bit quantization reduces memory usage from ~4GB to ~1GB."
+        },
+        {
+          "id": "c",
+          "text": "LoRA adapters with PEFT",
+          "isCorrect": true,
+          "feedback": "Correct: LoRA adapters enable parameter-efficient fine-tuning."
+        },
+        {
+          "id": "d",
+          "text": "Hugging Face Trainer API",
+          "isCorrect": true,
+          "feedback": "Correct: The Trainer API handles the training loop and optimization."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice_single",
+      "prompt": "Given the following function, how does the `preprocess_samples` function implement assistant-only masking and why is this important?\n\n```python\ndef preprocess_samples(samples, tokenizer, max_length=512):\n    \"\"\"\n    Tokenize and format samples for assistant-only fine-tuning.\n    \"\"\"\n    inputs = []\n    labels = []\n    \n    for sample in samples:\n        # Build the prompt\n        user_prompt = build_user_prompt(sample['dialogue'])\n        messages = [\n            {\"role\": \"user\", \"content\": user_prompt},\n            {\"role\": \"assistant\", \"content\": sample['summary']}\n        ]\n        \n        # Apply chat template\n        text = tokenizer.apply_chat_template(messages, tokenize=False)\n        \n        # Tokenize with offset mapping\n        tokenized = tokenizer(text, return_tensors=\"pt\", max_length=max_length, truncation=True, padding=False)\n        \n        # Find where assistant response starts\n        assistant_start = text.find(sample['summary'])\n        assistant_start_tokens = tokenized['input_ids'].shape[1] - len(tokenizer(sample['summary'])['input_ids']) - 1\n        \n        # Create labels: mask user tokens, keep assistant tokens\n        labels_tensor = tokenized['input_ids'].clone()\n        labels_tensor[0, :assistant_start_tokens] = -100  # Mask user tokens\n        \n        inputs.append(tokenized['input_ids'].squeeze())\n        labels.append(labels_tensor.squeeze())\n    \n    return {'input_ids': inputs, 'labels': labels}\n```",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It masks the assistant response to focus on user input",
+          "isCorrect": false,
+          "feedback": "Incorrect: It masks the user tokens, not the assistant response."
+        },
+        {
+          "id": "b",
+          "text": "It masks user tokens with -100 to focus training on generating the assistant's summary",
+          "isCorrect": true,
+          "feedback": "Correct: Assistant-only masking ensures the model learns to generate summaries, not predict user dialogue."
+        },
+        {
+          "id": "c",
+          "text": "It removes user tokens completely from the input",
+          "isCorrect": false,
+          "feedback": "Incorrect: User tokens remain in the input but are masked in the labels."
+        },
+        {
+          "id": "d",
+          "text": "It applies different masks for different roles",
+          "isCorrect": false,
+          "feedback": "Incorrect: It applies the same masking strategy (-100) to all user tokens."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice_single",
+      "prompt": "What does the quantization configuration achieve?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Improves model accuracy",
+          "isCorrect": false,
+          "feedback": "Incorrect: Quantization typically slightly reduces accuracy but enables training."
+        },
+        {
+          "id": "b",
+          "text": "Reduces memory usage from ~4GB to ~1GB using 4-bit quantization",
+          "isCorrect": true,
+          "feedback": "Correct: 4-bit quantization significantly reduces memory requirements while maintaining reasonable performance."
+        },
+        {
+          "id": "c",
+          "text": "Speeds up training by 4x",
+          "isCorrect": false,
+          "feedback": "Incorrect: While it helps with memory, the speed improvement is not 4x."
+        },
+        {
+          "id": "d",
+          "text": "Eliminates the need for LoRA adapters",
+          "isCorrect": false,
+          "feedback": "Incorrect: Quantization and LoRA serve different purposes and are used together."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple_choice_multiple",
+      "prompt": "What do the LoRA configuration parameters control?",
+      "allowMultiple": true,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "lora_r: 8 - rank of the adapter matrices",
+          "isCorrect": true,
+          "feedback": "Correct: Rank determines the size of the adapter matrices."
+        },
+        {
+          "id": "b",
+          "text": "lora_alpha: 16 - scaling factor for updates",
+          "isCorrect": true,
+          "feedback": "Correct: Alpha controls the scaling of LoRA updates (alpha/r ratio)."
+        },
+        {
+          "id": "c",
+          "text": "target_modules - which layers get adapters",
+          "isCorrect": true,
+          "feedback": "Correct: Specifies which attention layers receive LoRA adapters."
+        },
+        {
+          "id": "d",
+          "text": "lora_dropout: 0.1 - regularization",
+          "isCorrect": true,
+          "feedback": "Correct: Dropout helps prevent overfitting in the adapters."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple_choice_single",
+      "prompt": "What is the effective batch size with batch_size=4 and gradient_accumulation_steps=4?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "4",
+          "isCorrect": false,
+          "feedback": "Incorrect: That's just the per-device batch size."
+        },
+        {
+          "id": "b",
+          "text": "8",
+          "isCorrect": false,
+          "feedback": "Incorrect: Need to multiply batch_size by gradient_accumulation_steps."
+        },
+        {
+          "id": "c",
+          "text": "16",
+          "isCorrect": true,
+          "feedback": "Correct: 4 × 4 = 16 is the effective batch size."
+        },
+        {
+          "id": "d",
+          "text": "32",
+          "isCorrect": false,
+          "feedback": "Incorrect: The calculation is 4 × 4, not 4 × 8."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple_choice_single",
+      "prompt": "Why is gradient_accumulation_steps used?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "To speed up training",
+          "isCorrect": false,
+          "feedback": "Incorrect: It actually makes training slower per effective batch."
+        },
+        {
+          "id": "b",
+          "text": "To simulate larger batch sizes with limited memory",
+          "isCorrect": true,
+          "feedback": "Correct: It allows effective larger batches without requiring more GPU memory."
+        },
+        {
+          "id": "c",
+          "text": "To improve model accuracy",
+          "isCorrect": false,
+          "feedback": "Incorrect: It's a memory optimization technique, not an accuracy improvement."
+        },
+        {
+          "id": "d",
+          "text": "To reduce the number of training steps",
+          "isCorrect": false,
+          "feedback": "Incorrect: It doesn't reduce the number of steps, just how often weights are updated."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple_choice_multiple",
+      "prompt": "What memory optimization techniques are used in the training configuration?",
+      "allowMultiple": true,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "bf16: true - 16-bit precision",
+          "isCorrect": true,
+          "feedback": "Correct: BFloat16 reduces memory for activations and gradients."
+        },
+        {
+          "id": "b",
+          "text": "optim: paged_adamw_8bit - 8-bit optimizer",
+          "isCorrect": true,
+          "feedback": "Correct: Reduces optimizer state memory and pages to CPU when needed."
+        },
+        {
+          "id": "c",
+          "text": "4-bit quantization",
+          "isCorrect": true,
+          "feedback": "Correct: Reduces model weight memory from 4GB to ~1GB."
+        },
+        {
+          "id": "d",
+          "text": "LoRA adapters - fewer parameters",
+          "isCorrect": true,
+          "feedback": "Correct: Only trains ~1-2 million parameters instead of 1 billion."
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "multiple_choice_single",
+      "prompt": "How is the fine-tuned model evaluated?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "By loading the full fine-tuned model",
+          "isCorrect": false,
+          "feedback": "Incorrect: Only LoRA adapters are loaded, not the full model."
+        },
+        {
+          "id": "b",
+          "text": "By loading base model and attaching LoRA adapters",
+          "isCorrect": true,
+          "feedback": "Correct: PeftModel.from_pretrained() attaches adapters to the base model."
+        },
+        {
+          "id": "c",
+          "text": "By using a separate evaluation model",
+          "isCorrect": false,
+          "feedback": "Incorrect: The same base model with adapters is used for evaluation."
+        },
+        {
+          "id": "d",
+          "text": "By merging adapters into the base model",
+          "isCorrect": false,
+          "feedback": "Incorrect: Adapters are loaded separately, not merged for evaluation."
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "multiple_choice_single",
+      "prompt": "What ROUGE-L score did the QLoRA fine-tuned Llama 3.2 1B achieve?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "27.26%",
+          "isCorrect": false,
+          "feedback": "Incorrect: This was the baseline score before fine-tuning."
+        },
+        {
+          "id": "b",
+          "text": "31.28%",
+          "isCorrect": false,
+          "feedback": "Incorrect: This was GPT-4o-mini's baseline score."
+        },
+        {
+          "id": "c",
+          "text": "39.13%",
+          "isCorrect": true,
+          "feedback": "Correct: The fine-tuned model achieved 39.13% ROUGE-L."
+        },
+        {
+          "id": "d",
+          "text": "47.77%",
+          "isCorrect": false,
+          "feedback": "Incorrect: This was the fine-tuned GPT-4o-mini's score."
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "multiple_choice_single",
+      "prompt": "How much did ROUGE-L improve after fine-tuning?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "4.37%",
+          "isCorrect": false,
+          "feedback": "Incorrect: This is not the correct improvement amount."
+        },
+        {
+          "id": "b",
+          "text": "11.89%",
+          "isCorrect": true,
+          "feedback": "Correct: ROUGE-L improved from 27.24% to 39.13%, an 11.89% improvement."
+        },
+        {
+          "id": "c",
+          "text": "16.49%",
+          "isCorrect": false,
+          "feedback": "Incorrect: This is the improvement for GPT-4o-mini, not Llama 3.2."
+        },
+        {
+          "id": "d",
+          "text": "22.17%",
+          "isCorrect": false,
+          "feedback": "Incorrect: This is not the correct improvement amount."
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "multiple_choice_single",
+      "prompt": "What is the significance of the fine-tuned Llama 3.2 1B's performance?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It outperforms all other models",
+          "isCorrect": false,
+          "feedback": "Incorrect: It doesn't outperform the fine-tuned GPT-4o-mini."
+        },
+        {
+          "id": "b",
+          "text": "It surpasses base GPT-4o-mini despite being smaller",
+          "isCorrect": true,
+          "feedback": "Correct: The 1B model exceeds the base GPT-4o-mini's performance on all metrics."
+        },
+        {
+          "id": "c",
+          "text": "It achieves state-of-the-art results",
+          "isCorrect": false,
+          "feedback": "Incorrect: While impressive, it's not state-of-the-art."
+        },
+        {
+          "id": "d",
+          "text": "It requires no training to achieve these results",
+          "isCorrect": false,
+          "feedback": "Incorrect: The results are achieved through fine-tuning."
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "multiple_choice_single",
+      "prompt": "What does the `DataCollatorForLanguageModeling` do?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Handles dynamic padding for batches",
+          "isCorrect": true,
+          "feedback": "Correct: It pads sequences to the longest in the batch for efficient training."
+        },
+        {
+          "id": "b",
+          "text": "Applies masked language modeling",
+          "isCorrect": false,
+          "feedback": "Incorrect: mlm=False means it's not doing masked language modeling."
+        },
+        {
+          "id": "c",
+          "text": "Tokenizes the text data",
+          "isCorrect": false,
+          "feedback": "Incorrect: Tokenization is done separately in the preprocessing function."
+        },
+        {
+          "id": "d",
+          "text": "Computes the loss function",
+          "isCorrect": false,
+          "feedback": "Incorrect: The collator prepares batches, the model computes loss."
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "multiple_choice_single",
+      "prompt": "What is saved after training completes?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "The full fine-tuned model",
+          "isCorrect": false,
+          "feedback": "Incorrect: Only the LoRA adapters are saved, not the full model."
+        },
+        {
+          "id": "b",
+          "text": "LoRA adapters and tokenizer",
+          "isCorrect": true,
+          "feedback": "Correct: Both the adapters and tokenizer are saved to the output directory."
+        },
+        {
+          "id": "c",
+          "text": "Only the training checkpoints",
+          "isCorrect": false,
+          "feedback": "Incorrect: Final adapters are saved, not just checkpoints."
+        },
+        {
+          "id": "d",
+          "text": "The quantized model weights",
+          "isCorrect": false,
+          "feedback": "Incorrect: The base model weights are not saved, only the adapter deltas."
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "multiple_choice_single",
+      "prompt": "What is the role of the `prepare_model_for_kbit_training` function?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It quantizes the model to 4-bit",
+          "isCorrect": false,
+          "feedback": "Incorrect: Quantization is done during model loading, not by this function."
+        },
+        {
+          "id": "b",
+          "text": "It prepares the model for gradient checkpointing and adds trainable layers",
+          "isCorrect": true,
+          "feedback": "Correct: It sets up the model for efficient training with quantization."
+        },
+        {
+          "id": "c",
+          "text": "It applies LoRA adapters to the model",
+          "isCorrect": false,
+          "feedback": "Incorrect: LoRA is applied separately with get_peft_model()."
+        },
+        {
+          "id": "d",
+          "text": "It evaluates the model performance",
+          "isCorrect": false,
+          "feedback": "Incorrect: This is a preparation function, not an evaluation function."
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "multiple_choice_multiple",
+      "prompt": "What are the key differences between QLoRA and full fine-tuning?",
+      "allowMultiple": true,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "QLoRA trains only adapter weights (~1-2M parameters)",
+          "isCorrect": true,
+          "feedback": "Correct: QLoRA trains a small fraction of the total parameters."
+        },
+        {
+          "id": "b",
+          "text": "QLoRA uses 4-bit quantization to reduce memory",
+          "isCorrect": true,
+          "feedback": "Correct: Quantization significantly reduces memory requirements."
+        },
+        {
+          "id": "c",
+          "text": "QLoRA requires less compute and storage",
+          "isCorrect": true,
+          "feedback": "Correct: Fewer parameters and quantization mean lower resource requirements."
+        },
+        {
+          "id": "d",
+          "text": "QLoRA always produces better results",
+          "isCorrect": false,
+          "feedback": "Incorrect: While efficient, full fine-tuning can sometimes achieve better performance."
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "multiple_choice_single",
+      "prompt": "What will the next lesson focus on?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning Llama 3: Complete QLoRA Training Pipeline", "3_04", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Advanced hyperparameter optimization",
+          "isCorrect": false,
+          "feedback": "Incorrect: That comes after setting up cloud infrastructure."
+        },
+        {
+          "id": "b",
+          "text": "Moving the workflow to RunPod cloud GPU platform",
+          "isCorrect": true,
+          "feedback": "Correct: The next lesson covers running the pipeline on RunPod."
+        },
+        {
+          "id": "c",
+          "text": "Production deployment strategies",
+          "isCorrect": false,
+          "feedback": "Incorrect: Deployment comes later in the course."
+        },
+        {
+          "id": "d",
+          "text": "Comparing different quantization methods",
+          "isCorrect": false,
+          "feedback": "Incorrect: The focus shifts to cloud infrastructure, not more quantization."
+        }
+      ]
+    }
+  ]

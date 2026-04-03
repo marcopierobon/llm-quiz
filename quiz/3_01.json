@@ -1,0 +1,563 @@
+[
+    {
+      "id": "q1",
+      "type": "multiple_choice_single",
+      "prompt": "What is the main goal of Week 3 in this course?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "To learn about different LLM architectures",
+          "isCorrect": false,
+          "feedback": "Incorrect: Week 3 focuses on practical fine-tuning, not learning architectures."
+        },
+        {
+          "id": "b",
+          "text": "To take a base model, fine-tune it on a real dataset, and measure improvement",
+          "isCorrect": true,
+          "feedback": "Correct: Week 3 is about hands-on fine-tuning with real datasets and measurable improvements."
+        },
+        {
+          "id": "c",
+          "text": "To compare different pre-training strategies",
+          "isCorrect": false,
+          "feedback": "Incorrect: The focus is on fine-tuning, not pre-training."
+        },
+        {
+          "id": "d",
+          "text": "To study theoretical aspects of transformer models",
+          "isCorrect": false,
+          "feedback": "Incorrect: This week emphasizes practical application over theory."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice_single",
+      "prompt": "What dataset will be used for fine-tuning in Week 3?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "GSM8K - a math reasoning dataset",
+          "isCorrect": false,
+          "feedback": "Incorrect: GSM8K is mentioned as an example that required more than simple supervised fine-tuning."
+        },
+        {
+          "id": "b",
+          "text": "SAMSum - a dataset of messenger-like dialogues with summaries",
+          "isCorrect": true,
+          "feedback": "Correct: SAMSum is the main dataset used for the conversation summarization task."
+        },
+        {
+          "id": "c",
+          "text": "SQuAD - a question answering dataset",
+          "isCorrect": false,
+          "feedback": "Incorrect: SQuAD is not mentioned in this lesson."
+        },
+        {
+          "id": "d",
+          "text": "Common Crawl - a web text dataset",
+          "isCorrect": false,
+          "feedback": "Incorrect: Common Crawl is not the dataset being used for fine-tuning."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice_multiple",
+      "prompt": "Why is SAMSum considered perfect for fine-tuning?",
+      "allowMultiple": true,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It's realistic and mirrors real conversation patterns",
+          "isCorrect": true,
+          "feedback": "Correct: SAMSum contains messenger-like dialogues similar to real chat or customer support scenarios."
+        },
+        {
+          "id": "b",
+          "text": "It's compact for fast training but large enough to show improvement",
+          "isCorrect": true,
+          "feedback": "Correct: The dataset size allows for quick fine-tuning runs while still demonstrating measurable improvements."
+        },
+        {
+          "id": "c",
+          "text": "It's evaluated with ROUGE, a standard summarization metric",
+          "isCorrect": true,
+          "feedback": "Correct: ROUGE provides a standardized way to measure summarization quality."
+        },
+        {
+          "id": "d",
+          "text": "It contains millions of examples for deep learning",
+          "isCorrect": false,
+          "feedback": "Incorrect: SAMSum is described as compact, not containing millions of examples."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice_multiple",
+      "prompt": "What are the three key shifts mentioned for Week 3?",
+      "allowMultiple": true,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "From theory to practice",
+          "isCorrect": true,
+          "feedback": "Correct: Students will actually perform fine-tuning instead of just learning about it."
+        },
+        {
+          "id": "b",
+          "text": "From notebooks to infrastructure",
+          "isCorrect": true,
+          "feedback": "Correct: The progression moves from Colab to cloud GPUs and config-driven pipelines."
+        },
+        {
+          "id": "c",
+          "text": "From 'it works' to 'it's reproducible'",
+          "isCorrect": true,
+          "feedback": "Correct: Focus shifts to experiment tracking, versioning, and documentation."
+        },
+        {
+          "id": "d",
+          "text": "From single-task to multi-task learning",
+          "isCorrect": false,
+          "feedback": "Incorrect: The focus remains on the single task of conversation summarization."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple_choice_multiple",
+      "prompt": "What common issues might students face during Week 3?",
+      "allowMultiple": true,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "CUDA out-of-memory issues",
+          "isCorrect": true,
+          "feedback": "Correct: GPU memory limitations are a common challenge in LLM fine-tuning."
+        },
+        {
+          "id": "b",
+          "text": "Library version mismatches",
+          "isCorrect": true,
+          "feedback": "Correct: Dependency conflicts are frequent in ML environments."
+        },
+        {
+          "id": "c",
+          "text": "YAML misconfigurations",
+          "isCorrect": true,
+          "feedback": "Correct: Configuration errors are common when setting up training pipelines."
+        },
+        {
+          "id": "d",
+          "text": "RunPod setup quirks or authentication hiccups",
+          "isCorrect": true,
+          "feedback": "Correct: Cloud platform setup often has initial authentication and configuration challenges."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple_choice_single",
+      "prompt": "What is the recommended approach when facing errors during Week 3?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Skip the problematic part and move on",
+          "isCorrect": false,
+          "feedback": "Incorrect: The lesson emphasizes working through errors as part of the learning process."
+        },
+        {
+          "id": "b",
+          "text": "Slow down, read the error carefully, and use it as a guide",
+          "isCorrect": true,
+          "feedback": "Correct: Troubleshooting is presented as a core skill that deepens understanding."
+        },
+        {
+          "id": "c",
+          "text": "Immediately ask for help from forums",
+          "isCorrect": false,
+          "feedback": "Incorrect: While forums can help, the first step should be understanding the error."
+        },
+        {
+          "id": "d",
+          "text": "Restart the entire environment",
+          "isCorrect": false,
+          "feedback": "Incorrect: Restarting without understanding the error won't build troubleshooting skills."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple_choice_single",
+      "prompt": "What is the first step in Lesson 1?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Fine-tune the model with LoRA",
+          "isCorrect": false,
+          "feedback": "Incorrect: Fine-tuning comes after establishing the baseline."
+        },
+        {
+          "id": "b",
+          "text": "Set up RunPod cloud GPUs",
+          "isCorrect": false,
+          "feedback": "Incorrect: RunPod setup is covered in Lesson 4."
+        },
+        {
+          "id": "c",
+          "text": "Load Llama 3.2 1B and evaluate it on SAMSum to establish baseline",
+          "isCorrect": true,
+          "feedback": "Correct: Establishing baseline performance is the starting point before any fine-tuning."
+        },
+        {
+          "id": "d",
+          "text": "Integrate Weights & Biases for tracking",
+          "isCorrect": false,
+          "feedback": "Incorrect: W&B integration is introduced in Lesson 5."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple_choice_single",
+      "prompt": "What metric will be used to measure summarization performance?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "BLEU score",
+          "isCorrect": false,
+          "feedback": "Incorrect: BLEU is used for translation, not mentioned for this task."
+        },
+        {
+          "id": "b",
+          "text": "ROUGE score",
+          "isCorrect": true,
+          "feedback": "Correct: ROUGE is explicitly mentioned as the standard summarization metric."
+        },
+        {
+          "id": "c",
+          "text": "Perplexity",
+          "isCorrect": false,
+          "feedback": "Incorrect: Perplexity measures language model quality, not summarization specifically."
+        },
+        {
+          "id": "d",
+          "text": "Accuracy",
+          "isCorrect": false,
+          "feedback": "Incorrect: Accuracy is not the appropriate metric for summarization tasks."
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "multiple_choice_multiple",
+      "prompt": "What tools and infrastructure will be used throughout Week 3?",
+      "allowMultiple": true,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Google Colab for initial prototyping",
+          "isCorrect": true,
+          "feedback": "Correct: The week starts simple in Colab before scaling to cloud GPUs."
+        },
+        {
+          "id": "b",
+          "text": "RunPod cloud GPUs for scaling",
+          "isCorrect": true,
+          "feedback": "Correct: RunPod is introduced for faster training with fewer resource limits."
+        },
+        {
+          "id": "c",
+          "text": "Weights & Biases for experiment tracking",
+          "isCorrect": true,
+          "feedback": "Correct: W&B is integrated for reproducibility and metric logging."
+        },
+        {
+          "id": "d",
+          "text": "Config-driven pipelines for reproducibility",
+          "isCorrect": true,
+          "feedback": "Correct: Configuration files are used to make experiments reproducible."
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "multiple_choice_single",
+      "prompt": "What base model is mentioned for starting the fine-tuning process?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "GPT-4",
+          "isCorrect": false,
+          "feedback": "Incorrect: GPT-4 is not mentioned as the base model for this exercise."
+        },
+        {
+          "id": "b",
+          "text": "Llama 3.2 1B",
+          "isCorrect": true,
+          "feedback": "Correct: Llama 3.2 1B is specifically mentioned as the starting base model."
+        },
+        {
+          "id": "c",
+          "text": "BERT",
+          "isCorrect": false,
+          "feedback": "Incorrect: BERT is not suitable for generative summarization tasks."
+        },
+        {
+          "id": "d",
+          "text": "T5",
+          "isCorrect": false,
+          "feedback": "Incorrect: T5 is not mentioned as the model for this week's exercises."
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "multiple_choice_single",
+      "prompt": "What makes Week 3 different from previous weeks according to the content?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It focuses more on mathematical foundations",
+          "isCorrect": false,
+          "feedback": "Incorrect: Week 3 is described as the most hands-on week, not theoretical."
+        },
+        {
+          "id": "b",
+          "text": "It's the most hands-on week with real fine-tuning",
+          "isCorrect": true,
+          "feedback": "Correct: The content explicitly states this is the most hands-on week yet."
+        },
+        {
+          "id": "c",
+          "text": "It covers only theoretical concepts",
+          "isCorrect": false,
+          "feedback": "Incorrect: The emphasis is on practical application over theory."
+        },
+        {
+          "id": "d",
+          "text": "It requires no coding",
+          "isCorrect": false,
+          "feedback": "Incorrect: This week involves extensive coding and troubleshooting."
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "multiple_choice_single",
+      "prompt": "What is the purpose of establishing a baseline before fine-tuning?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "To waste time before starting real work",
+          "isCorrect": false,
+          "feedback": "Incorrect: Baseline evaluation is crucial for measuring improvement."
+        },
+        {
+          "id": "b",
+          "text": "To have a reference point for measuring improvements",
+          "isCorrect": true,
+          "feedback": "Correct: The baseline provides the starting point to quantify fine-tuning benefits."
+        },
+        {
+          "id": "c",
+          "text": "To test if the model can load correctly",
+          "isCorrect": false,
+          "feedback": "Incorrect: While loading is tested, the main purpose is measurement."
+        },
+        {
+          "id": "d",
+          "text": "To compare with other students' results",
+          "isCorrect": false,
+          "feedback": "Incorrect: The baseline is for measuring your own model's improvement."
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "multiple_choice_single",
+      "prompt": "What does the course say about troubleshooting and errors?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Errors should be avoided at all costs",
+          "isCorrect": false,
+          "feedback": "Incorrect: Errors are presented as normal and part of the learning process."
+        },
+        {
+          "id": "b",
+          "text": "Troubleshooting is core to LLM engineering",
+          "isCorrect": true,
+          "feedback": "Correct: The content emphasizes that each fix deepens understanding."
+        },
+        {
+          "id": "c",
+          "text": "Errors indicate you're doing something wrong",
+          "isCorrect": false,
+          "feedback": "Incorrect: Errors are normal and expected in ML engineering."
+        },
+        {
+          "id": "d",
+          "text": "You should immediately switch to an easier task",
+          "isCorrect": false,
+          "feedback": "Incorrect: Persistence through errors is encouraged as a learning opportunity."
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "multiple_choice_single",
+      "prompt": "What will students have by the end of Week 3?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "A theoretical understanding of fine-tuning",
+          "isCorrect": false,
+          "feedback": "Incorrect: The outcome is practical, not just theoretical."
+        },
+        {
+          "id": "b",
+          "text": "A complete, reproducible fine-tuning pipeline",
+          "isCorrect": true,
+          "feedback": "Correct: The goal is a reusable pipeline for any model or task."
+        },
+        {
+          "id": "c",
+          "text": "A published research paper",
+          "isCorrect": false,
+          "feedback": "Incorrect: The focus is on practical skills, not publication."
+        },
+        {
+          "id": "d",
+          "text": "A job at an ML company",
+          "isCorrect": false,
+          "feedback": "Incorrect: While skills are valuable, employment is not guaranteed."
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "multiple_choice_single",
+      "prompt": "Why is GSM8K mentioned in the lesson?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "As the main dataset for the week",
+          "isCorrect": false,
+          "feedback": "Incorrect: SAMSum is the main dataset, not GSM8K."
+        },
+        {
+          "id": "b",
+          "text": "As an example of a task requiring more than simple supervised fine-tuning",
+          "isCorrect": true,
+          "feedback": "Correct: GSM8K is mentioned to show that some tasks need advanced techniques."
+        },
+        {
+          "id": "c",
+          "text": "As a backup dataset if SAMSum doesn't work",
+          "isCorrect": false,
+          "feedback": "Incorrect: GSM8K is not presented as an alternative dataset."
+        },
+        {
+          "id": "d",
+          "text": "As a dataset for evaluation only",
+          "isCorrect": false,
+          "feedback": "Incorrect: It's mentioned as an example of a challenging task, not for evaluation."
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "multiple_choice_single",
+      "prompt": "What professional habits will students develop in Week 3?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Writing documentation and reports",
+          "isCorrect": false,
+          "feedback": "Incorrect: While important, this isn't the main focus mentioned."
+        },
+        {
+          "id": "b",
+          "text": "Tracking experiments, versioning results, and documenting process",
+          "isCorrect": true,
+          "feedback": "Correct: These are explicitly mentioned as habits of professional ML engineers."
+        },
+        {
+          "id": "c",
+          "text": "Attending team meetings and standups",
+          "isCorrect": false,
+          "feedback": "Incorrect: The focus is on technical practices, not meetings."
+        },
+        {
+          "id": "d",
+          "text": "Code review and pull request processes",
+          "isCorrect": false,
+          "feedback": "Incorrect: While valuable, these aren't the highlighted habits for this week."
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "multiple_choice_single",
+      "prompt": "What is the progression path for the week's lessons?",
+      "allowMultiple": false,
+      "tags": ["Unit 3 Overview: Fine-Tuning Your First LLM End-to-End", "3_01", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Start with cloud, then move to local",
+          "isCorrect": false,
+          "feedback": "Incorrect: The progression is from local/simple to cloud/advanced."
+        },
+        {
+          "id": "b",
+          "text": "Baseline → Managed fine-tuning → Self-hosted fine-tuning → Cloud scaling → Tracking",
+          "isCorrect": true,
+          "feedback": "Correct: This represents the logical progression from simple to advanced workflows."
+        },
+        {
+          "id": "c",
+          "text": "Theory → Practice → Deployment → Maintenance",
+          "isCorrect": false,
+          "feedback": "Incorrect: The focus is on different fine-tuning approaches, not deployment lifecycle."
+        },
+        {
+          "id": "d",
+          "text": "Small model → Large model → Ensemble → Distillation",
+          "isCorrect": false,
+          "feedback": "Incorrect: The model size remains consistent; focus is on methodology."
+        }
+      ]
+    }
+  ]

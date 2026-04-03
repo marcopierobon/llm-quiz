@@ -1,0 +1,563 @@
+[
+    {
+      "id": "q1",
+      "type": "multiple_choice_single",
+      "prompt": "What is the main purpose of Lesson 3?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "To fine-tune Llama 3.2 using LoRA",
+          "isCorrect": false,
+          "feedback": "Incorrect: LoRA fine-tuning is covered in lesson 3_04."
+        },
+        {
+          "id": "b",
+          "text": "To explore OpenAI's managed fine-tuning API as a comparison to self-hosted fine-tuning",
+          "isCorrect": true,
+          "feedback": "Correct: This lesson demonstrates managed fine-tuning as a curiosity-driven benchmark."
+        },
+        {
+          "id": "c",
+          "text": "To set up RunPod cloud GPUs",
+          "isCorrect": false,
+          "feedback": "Incorrect: RunPod setup is covered in a later lesson."
+        },
+        {
+          "id": "d",
+          "text": "To integrate Weights & Biases for tracking",
+          "isCorrect": false,
+          "feedback": "Incorrect: W&B integration is covered in a later lesson."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice_multiple",
+      "prompt": "What are the trade-offs of using managed fine-tuning services like OpenAI's?",
+      "allowMultiple": true,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Less control or visibility into model internals",
+          "isCorrect": true,
+          "feedback": "Correct: Managed services hide the training details and internal model modifications."
+        },
+        {
+          "id": "b",
+          "text": "Higher per-token costs",
+          "isCorrect": true,
+          "feedback": "Correct: Managed fine-tuning typically has higher costs than self-hosted solutions."
+        },
+        {
+          "id": "c",
+          "text": "No access to intermediate checkpoints",
+          "isCorrect": true,
+          "feedback": "Correct: You only get the final model, not the training checkpoints."
+        },
+        {
+          "id": "d",
+          "text": "Slower training times",
+          "isCorrect": false,
+          "feedback": "Incorrect: Managed services often have optimized infrastructure that can be faster."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice_multiple",
+      "prompt": "What are the two workflows compared in this lesson?",
+      "allowMultiple": true,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Workflow 1: Baseline evaluation of GPT-4o-mini",
+          "isCorrect": true,
+          "feedback": "Correct: The first workflow evaluates the base GPT-4o-mini model."
+        },
+        {
+          "id": "b",
+          "text": "Workflow 2: Managed fine-tuning of GPT-4o-mini",
+          "isCorrect": true,
+          "feedback": "Correct: The second workflow fine-tunes GPT-4o-mini using OpenAI's API."
+        },
+        {
+          "id": "c",
+          "text": "Workflow 1: LoRA fine-tuning of Llama 3.2",
+          "isCorrect": false,
+          "feedback": "Incorrect: LoRA fine-tuning is not covered in this lesson."
+        },
+        {
+          "id": "d",
+          "text": "Workflow 2: QLoRA training on cloud GPUs",
+          "isCorrect": false,
+          "feedback": "Incorrect: QLoRA training is covered in lesson 3_04."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "multiple_choice_single",
+      "prompt": "What data format does OpenAI's fine-tuning API expect?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "CSV format",
+          "isCorrect": false,
+          "feedback": "Incorrect: OpenAI expects JSONL, not CSV."
+        },
+        {
+          "id": "b",
+          "text": "JSON format",
+          "isCorrect": false,
+          "feedback": "Incorrect: While it uses JSON, the specific format is JSONL (one JSON per line)."
+        },
+        {
+          "id": "c",
+          "text": "JSONL format with chat messages",
+          "isCorrect": true,
+          "feedback": "Correct: Each line contains a JSON object with 'messages' array containing user/assistant roles."
+        },
+        {
+          "id": "d",
+          "text": "Parquet format",
+          "isCorrect": false,
+          "feedback": "Incorrect: OpenAI does not use Parquet for fine-tuning."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "multiple_choice_single",
+      "prompt": "Given the following function, how does the `generate_openai_predictions` function handle concurrent API calls and what error handling does it implement?\n\n```python\ndef generate_openai_predictions(model_name, dataset, task_instruction, num_samples=None, max_workers=10, sleep_time=0.25):\n    if num_samples is not None and num_samples < len(dataset):\n        dataset = dataset.select(range(num_samples))\n    total = len(dataset)\n    preds = [None] * total\n\n    def process_sample(idx, sample):\n        messages = build_messages_for_sample(sample, task_instruction, include_assistant=False)\n        try:\n            response = client.chat.completions.create(model=model_name, messages=messages, temperature=0.2, max_tokens=128)\n            return idx, response.choices[0].message.content.strip()\n        except Exception as e:\n            print(f\"⚠️ Error on sample {idx}: {e}\")\n            return idx, \"\"\n\n    with ThreadPoolExecutor(max_workers=max_workers) as executor:\n        futures = [executor.submit(process_sample, i, dataset[i]) for i in range(total)]\n        for i, future in enumerate(as_completed(futures), start=1):\n            idx, output_text = future.result()\n            preds[idx] = output_text\n            if i % 10 == 0 or i == total:\n                print(f\"✅ Completed {i}/{total}\")\n            time.sleep(sleep_time)\n    return preds\n```",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It processes samples sequentially and retries on errors",
+          "isCorrect": false,
+          "feedback": "Incorrect: It uses ThreadPoolExecutor for concurrent processing, not sequential."
+        },
+        {
+          "id": "b",
+          "text": "It uses ThreadPoolExecutor for concurrent API calls with error handling that returns empty string on failures",
+          "isCorrect": true,
+          "feedback": "Correct: It processes samples concurrently using threads and handles exceptions by returning empty strings."
+        },
+        {
+          "id": "c",
+          "text": "It processes all samples at once without any error handling",
+          "isCorrect": false,
+          "feedback": "Incorrect: It has try-except blocks for error handling and processes in batches."
+        },
+        {
+          "id": "d",
+          "text": "It uses async/await for non-blocking API calls",
+          "isCorrect": false,
+          "feedback": "Incorrect: It uses ThreadPoolExecutor, not async/await patterns."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "multiple_choice_single",
+      "prompt": "What hyperparameters are used in the OpenAI fine-tuning job?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "n_epochs: 3, learning_rate_multiplier: 0.1, batch_size: 16",
+          "isCorrect": false,
+          "feedback": "Incorrect: These are not the hyperparameters used in the lesson."
+        },
+        {
+          "id": "b",
+          "text": "n_epochs: 1, learning_rate_multiplier: 1, batch_size: 8",
+          "isCorrect": true,
+          "feedback": "Correct: These are the exact hyperparameters specified in the fine-tuning job creation."
+        },
+        {
+          "id": "c",
+          "text": "n_epochs: 5, learning_rate_multiplier: 2, batch_size: 32",
+          "isCorrect": false,
+          "feedback": "Incorrect: These are not the hyperparameters used in the lesson."
+        },
+        {
+          "id": "d",
+          "text": "n_epochs: 10, learning_rate_multiplier: 0.5, batch_size: 4",
+          "isCorrect": false,
+          "feedback": "Incorrect: These are not the hyperparameters used in the lesson."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "multiple_choice_single",
+      "prompt": "Given the following function, how does the `convert_to_jsonl` function transform the dataset and what structure does it create?\n\n```python\ndef convert_to_jsonl(dataset, out_path):\n    with open(out_path, \"w\") as f:\n        for sample in dataset:\n            record = {\n                \"messages\": [\n                    {\"role\": \"user\", \"content\": build_user_prompt(sample[\"dialogue\"])},\n                    {\"role\": \"assistant\", \"content\": sample[\"summary\"]}\n                ]\n            }\n            f.write(json.dumps(record) + \"\\n\")\n    print(f\"✅ Saved: {out_path}\")\n```",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It converts each sample to a JSON with dialogue and summary fields",
+          "isCorrect": false,
+          "feedback": "Incorrect: It creates a messages array with user/assistant roles, not direct fields."
+        },
+        {
+          "id": "b",
+          "text": "It creates a messages array with user prompt and assistant response for each sample",
+          "isCorrect": true,
+          "feedback": "Correct: It structures each sample as a chat conversation with user and assistant messages."
+        },
+        {
+          "id": "c",
+          "text": "It combines all samples into a single JSON array",
+          "isCorrect": false,
+          "feedback": "Incorrect: It creates one JSON object per line (JSONL format), not a single array."
+        },
+        {
+          "id": "d",
+          "text": "It extracts only the dialogue text and ignores summaries",
+          "isCorrect": false,
+          "feedback": "Incorrect: It includes both the dialogue (as user prompt) and summary (as assistant response)."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "multiple_choice_single",
+      "prompt": "How is the fine-tuning job monitored?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "By checking local log files",
+          "isCorrect": false,
+          "feedback": "Incorrect: The training happens on OpenAI's infrastructure, not locally."
+        },
+        {
+          "id": "b",
+          "text": "Through the OpenAI dashboard or API status checks",
+          "isCorrect": true,
+          "feedback": "Correct: Progress can be monitored via the dashboard or by polling the job status through the API."
+        },
+        {
+          "id": "c",
+          "text": "By watching GPU utilization metrics",
+          "isCorrect": false,
+          "feedback": "Incorrect: The GPUs are managed by OpenAI, not directly accessible."
+        },
+        {
+          "id": "d",
+          "text": "Through email notifications",
+          "isCorrect": false,
+          "feedback": "Incorrect: While notifications might be available, the primary method is dashboard/API monitoring."
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "multiple_choice_single",
+      "prompt": "What ROUGE scores did the base GPT-4o-mini achieve?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "ROUGE-1: 29.97%, ROUGE-2: 10.50%, ROUGE-L: 21.28%",
+          "isCorrect": false,
+          "feedback": "Incorrect: These scores are lower than the actual GPT-4o-mini baseline."
+        },
+        {
+          "id": "b",
+          "text": "ROUGE-1: 39.97%, ROUGE-2: 15.50%, ROUGE-L: 31.28%",
+          "isCorrect": true,
+          "feedback": "Correct: These are the baseline scores for GPT-4o-mini before fine-tuning."
+        },
+        {
+          "id": "c",
+          "text": "ROUGE-1: 49.97%, ROUGE-2: 20.50%, ROUGE-L: 41.28%",
+          "isCorrect": false,
+          "feedback": "Incorrect: These scores are higher than the baseline; they might be post-fine-tuning."
+        },
+        {
+          "id": "d",
+          "text": "ROUGE-1: 59.97%, ROUGE-2: 25.50%, ROUGE-L: 51.28%",
+          "isCorrect": false,
+          "feedback": "Incorrect: These scores are much higher than the actual results."
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "multiple_choice_single",
+      "prompt": "What ROUGE scores did the fine-tuned GPT-4o-mini achieve?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "ROUGE-1: 45.72%, ROUGE-2: 22.80%, ROUGE-L: 37.77%",
+          "isCorrect": false,
+          "feedback": "Incorrect: These scores are lower than the actual fine-tuned results."
+        },
+        {
+          "id": "b",
+          "text": "ROUGE-1: 55.72%, ROUGE-2: 32.80%, ROUGE-L: 47.77%",
+          "isCorrect": true,
+          "feedback": "Correct: These are the scores achieved after fine-tuning GPT-4o-mini."
+        },
+        {
+          "id": "c",
+          "text": "ROUGE-1: 65.72%, ROUGE-2: 42.80%, ROUGE-L: 57.77%",
+          "isCorrect": false,
+          "feedback": "Incorrect: These scores are higher than the actual fine-tuned results."
+        },
+        {
+          "id": "d",
+          "text": "ROUGE-1: 75.72%, ROUGE-2: 52.80%, ROUGE-L: 67.77%",
+          "isCorrect": false,
+          "feedback": "Incorrect: These scores are much higher than the actual results."
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "multiple_choice_single",
+      "prompt": "How much did ROUGE-L improve after fine-tuning GPT-4o-mini?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "6.49%",
+          "isCorrect": false,
+          "feedback": "Incorrect: The improvement was larger than 6.49%."
+        },
+        {
+          "id": "b",
+          "text": "16.49%",
+          "isCorrect": true,
+          "feedback": "Correct: ROUGE-L improved from 31.28% to 47.77%, an improvement of 16.49%."
+        },
+        {
+          "id": "c",
+          "text": "26.49%",
+          "isCorrect": false,
+          "feedback": "Incorrect: The improvement was 16.49%, not 26.49%."
+        },
+        {
+          "id": "d",
+          "text": "36.49%",
+          "isCorrect": false,
+          "feedback": "Incorrect: The improvement was 16.49%, not 36.49%."
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "multiple_choice_multiple",
+      "prompt": "What does the `openai_workflow.py` script provide?",
+      "allowMultiple": true,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Interactive menu for workflow management",
+          "isCorrect": true,
+          "feedback": "Correct: The script provides a menu-driven interface for managing the workflow."
+        },
+        {
+          "id": "b",
+          "text": "Functions to prepare data, run fine-tuning, and evaluate models",
+          "isCorrect": true,
+          "feedback": "Correct: It includes functions for all three main workflow steps."
+        },
+        {
+          "id": "c",
+          "text": "Direct GPU management for training",
+          "isCorrect": false,
+          "feedback": "Incorrect: GPU management is handled by OpenAI, not this script."
+        },
+        {
+          "id": "d",
+          "text": "Integration with Hugging Face models",
+          "isCorrect": false,
+          "feedback": "Incorrect: This script is specifically for OpenAI workflows, not Hugging Face."
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "multiple_choice_single",
+      "prompt": "What is the significance of the temperature parameter in the API calls?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Higher temperature means more random outputs",
+          "isCorrect": true,
+          "feedback": "Correct: Temperature controls randomness; lower values give more deterministic outputs."
+        },
+        {
+          "id": "b",
+          "text": "Temperature affects the speed of API responses",
+          "isCorrect": false,
+          "feedback": "Incorrect: Temperature controls output randomness, not response speed."
+        },
+        {
+          "id": "c",
+          "text": "Temperature determines the model's knowledge cutoff",
+          "isCorrect": false,
+          "feedback": "Incorrect: Temperature is about generation randomness, not knowledge."
+        },
+        {
+          "id": "d",
+          "text": "Temperature sets the maximum token limit",
+          "isCorrect": false,
+          "feedback": "Incorrect: Max tokens is a separate parameter from temperature."
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "multiple_choice_single",
+      "prompt": "Why is this lesson described as a 'curiosity-driven benchmark'?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Because it's optional and not required for the course",
+          "isCorrect": false,
+          "feedback": "Incorrect: While it's a detour, it's part of the learning journey."
+        },
+        {
+          "id": "b",
+          "text": "Because it explores managed fine-tuning before returning to self-hosted approaches",
+          "isCorrect": true,
+          "feedback": "Correct: It's an exploration of an alternative approach before the main self-hosted fine-tuning."
+        },
+        {
+          "id": "c",
+          "text": "Because it uses experimental features",
+          "isCorrect": false,
+          "feedback": "Incorrect: The features used are production-ready, not experimental."
+        },
+        {
+          "id": "d",
+          "text": "Because it's just for fun and has no practical value",
+          "isCorrect": false,
+          "feedback": "Incorrect: It provides valuable comparison and understanding of different approaches."
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "multiple_choice_single",
+      "prompt": "What happens after the fine-tuning job completes?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "practice"],
+      "options": [
+        {
+          "id": "a",
+          "text": "The model weights are downloaded locally",
+          "isCorrect": false,
+          "feedback": "Incorrect: The fine-tuned model remains hosted on OpenAI's infrastructure."
+        },
+        {
+          "id": "b",
+          "text": "A fine-tuned model ID is returned for API access",
+          "isCorrect": true,
+          "feedback": "Correct: You get a model ID (e.g., ft:gpt-4o-mini-...) that you can use for API calls."
+        },
+        {
+          "id": "c",
+          "text": "The model is automatically deployed to production",
+          "isCorrect": false,
+          "feedback": "Incorrect: The model is available for API use but not automatically deployed."
+        },
+        {
+          "id": "d",
+          "text": "Training checkpoints are available for download",
+          "isCorrect": false,
+          "feedback": "Incorrect: One of the trade-offs is no access to intermediate checkpoints."
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "multiple_choice_single",
+      "prompt": "How does the fine-tuned GPT-4o-mini compare to the Llama 3.2 1B baseline?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "It performs worse on all metrics",
+          "isCorrect": false,
+          "feedback": "Incorrect: The fine-tuned GPT-4o-mini significantly outperforms Llama 3.2 1B."
+        },
+        {
+          "id": "b",
+          "text": "It performs about the same",
+          "isCorrect": false,
+          "feedback": "Incorrect: There's a significant performance difference in favor of GPT-4o-mini."
+        },
+        {
+          "id": "c",
+          "text": "It significantly outperforms Llama 3.2 1B on all ROUGE metrics",
+          "isCorrect": true,
+          "feedback": "Correct: The fine-tuned GPT-4o-mini achieves much higher scores across all metrics."
+        },
+        {
+          "id": "d",
+          "text": "It only performs better on ROUGE-1",
+          "isCorrect": false,
+          "feedback": "Incorrect: It performs better on all three ROUGE metrics."
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "multiple_choice_single",
+      "prompt": "What will the next lesson focus on?",
+      "allowMultiple": false,
+      "tags": ["Fine-Tuning GPT Models: OpenAI's Managed Fine-Tuning API Walkthrough", "3_03", "theory"],
+      "options": [
+        {
+          "id": "a",
+          "text": "Advanced hyperparameter optimization",
+          "isCorrect": false,
+          "feedback": "Incorrect: The next lesson focuses on hands-on LoRA fine-tuning."
+        },
+        {
+          "id": "b",
+          "text": "Hands-on LoRA fine-tuning of Llama 3.2 1B",
+          "isCorrect": true,
+          "feedback": "Correct: The next lesson covers self-hosted fine-tuning using LoRA."
+        },
+        {
+          "id": "c",
+          "text": "Production deployment strategies",
+          "isCorrect": false,
+          "feedback": "Incorrect: Deployment comes later in the course."
+        },
+        {
+          "id": "d",
+          "text": "Comparing multiple managed fine-tuning services",
+          "isCorrect": false,
+          "feedback": "Incorrect: The focus shifts to self-hosted fine-tuning, not more managed services."
+        }
+      ]
+    }
+  ]

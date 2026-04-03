@@ -1,0 +1,33 @@
+{
+  "id": "q1",
+  "type": "multiple_choice_multiple",
+  "prompt": "Which of these are transport-layer protocols?",
+  "allowMultiple": true,
+  "tags": ["Coding"],
+  "options": [
+    {
+      "id": "a",
+      "text": "TCP",
+      "isCorrect": true,
+      "feedback": "Correct: TCP is a transport-layer protocol."
+    },
+    {
+      "id": "b",
+      "text": "UDP",
+      "isCorrect": true,
+      "feedback": "Correct: UDP is also a transport-layer protocol."
+    },
+    {
+      "id": "c",
+      "text": "IP",
+      "isCorrect": false,
+      "feedback": "Incorrect: IP is a network-layer protocol."
+    },
+    {
+      "id": "d",
+      "text": "ARP",
+      "isCorrect": false,
+      "feedback": "Incorrect: ARP is not a transport-layer protocol."
+    }
+  ]
+}

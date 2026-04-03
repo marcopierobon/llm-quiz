@@ -1,0 +1,1984 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.560 --> 00:00:02.950 align:start position:0%
+ 
+Hey<00:00:00.880><c> there,</c><00:00:01.280><c> welcome</c><00:00:01.600><c> back.</c><00:00:02.240><c> In</c><00:00:02.480><c> this</c><00:00:02.639><c> video,</c>
+
+00:00:02.950 --> 00:00:02.960 align:start position:0%
+Hey there, welcome back. In this video,
+ 
+
+00:00:02.960 --> 00:00:05.910 align:start position:0%
+Hey there, welcome back. In this video,
+I<00:00:03.280><c> wanted</c><00:00:03.520><c> to</c><00:00:03.760><c> do</c><00:00:04.080><c> a</c><00:00:04.480><c> big</c><00:00:04.720><c> picture</c><00:00:05.120><c> view</c><00:00:05.440><c> of</c><00:00:05.680><c> the</c>
+
+00:00:05.910 --> 00:00:05.920 align:start position:0%
+I wanted to do a big picture view of the
+ 
+
+00:00:05.920 --> 00:00:09.190 align:start position:0%
+I wanted to do a big picture view of the
+CQRA<00:00:06.879><c> fine-tuning</c><00:00:07.520><c> or</c><00:00:07.759><c> training</c><00:00:08.080><c> pipeline.</c>
+
+00:00:09.190 --> 00:00:09.200 align:start position:0%
+CQRA fine-tuning or training pipeline.
+ 
+
+00:00:09.200 --> 00:00:11.669 align:start position:0%
+CQRA fine-tuning or training pipeline.
+Uh<00:00:09.599><c> we</c><00:00:09.840><c> are</c><00:00:10.000><c> sharing</c><00:00:10.320><c> the</c><00:00:10.719><c> git</c><00:00:11.040><c> repository</c>
+
+00:00:11.669 --> 00:00:11.679 align:start position:0%
+Uh we are sharing the git repository
+ 
+
+00:00:11.679 --> 00:00:13.910 align:start position:0%
+Uh we are sharing the git repository
+along<00:00:12.000><c> with</c><00:00:12.160><c> this</c><00:00:12.320><c> lesson,</c><00:00:12.719><c> this</c><00:00:13.040><c> video.</c><00:00:13.759><c> Uh</c>
+
+00:00:13.910 --> 00:00:13.920 align:start position:0%
+along with this lesson, this video. Uh
+ 
+
+00:00:13.920 --> 00:00:15.749 align:start position:0%
+along with this lesson, this video. Uh
+but<00:00:14.160><c> I</c><00:00:14.400><c> thought</c><00:00:14.559><c> before</c><00:00:14.880><c> we</c><00:00:15.040><c> do</c><00:00:15.200><c> a</c><00:00:15.360><c> full</c><00:00:15.519><c> walk</c>
+
+00:00:15.749 --> 00:00:15.759 align:start position:0%
+but I thought before we do a full walk
+ 
+
+00:00:15.759 --> 00:00:17.910 align:start position:0%
+but I thought before we do a full walk
+through<00:00:16.000><c> the</c><00:00:16.240><c> code,</c><00:00:17.199><c> uh</c><00:00:17.359><c> it</c><00:00:17.600><c> will</c><00:00:17.760><c> be</c>
+
+00:00:17.910 --> 00:00:17.920 align:start position:0%
+through the code, uh it will be
+ 
+
+00:00:17.920 --> 00:00:20.390 align:start position:0%
+through the code, uh it will be
+important<00:00:18.240><c> to</c><00:00:18.480><c> map</c><00:00:18.720><c> out</c><00:00:18.960><c> the</c><00:00:19.119><c> journey</c><00:00:19.680><c> and</c><00:00:20.080><c> see</c>
+
+00:00:20.390 --> 00:00:20.400 align:start position:0%
+important to map out the journey and see
+ 
+
+00:00:20.400 --> 00:00:22.710 align:start position:0%
+important to map out the journey and see
+what<00:00:20.640><c> are</c><00:00:20.720><c> the</c><00:00:20.880><c> key</c><00:00:21.119><c> steps</c><00:00:21.520><c> we</c><00:00:21.840><c> are</c><00:00:22.480><c> going</c>
+
+00:00:22.710 --> 00:00:22.720 align:start position:0%
+what are the key steps we are going
+ 
+
+00:00:22.720 --> 00:00:25.910 align:start position:0%
+what are the key steps we are going
+through.<00:00:23.359><c> Uh</c><00:00:23.600><c> without</c><00:00:24.080><c> that</c><00:00:24.560><c> highle</c><00:00:25.359><c> view,</c><00:00:25.680><c> I</c>
+
+00:00:25.910 --> 00:00:25.920 align:start position:0%
+through. Uh without that highle view, I
+ 
+
+00:00:25.920 --> 00:00:27.349 align:start position:0%
+through. Uh without that highle view, I
+think<00:00:26.000><c> it</c><00:00:26.160><c> would</c><00:00:26.240><c> be</c><00:00:26.400><c> easy</c><00:00:26.560><c> to</c><00:00:26.720><c> get</c><00:00:26.880><c> lost</c><00:00:27.199><c> in</c>
+
+00:00:27.349 --> 00:00:27.359 align:start position:0%
+think it would be easy to get lost in
+ 
+
+00:00:27.359 --> 00:00:29.429 align:start position:0%
+think it would be easy to get lost in
+the<00:00:27.519><c> details.</c><00:00:28.240><c> Uh</c><00:00:28.480><c> also</c><00:00:28.720><c> I</c><00:00:28.960><c> thought</c><00:00:29.119><c> like</c><00:00:29.279><c> if</c>
+
+00:00:29.429 --> 00:00:29.439 align:start position:0%
+the details. Uh also I thought like if
+ 
+
+00:00:29.439 --> 00:00:31.269 align:start position:0%
+the details. Uh also I thought like if
+we<00:00:29.679><c> just</c><00:00:29.840><c> did</c><00:00:30.000><c> a</c><00:00:30.240><c> very</c><00:00:30.480><c> detailed</c><00:00:30.880><c> walk</c><00:00:31.119><c> through</c>
+
+00:00:31.269 --> 00:00:31.279 align:start position:0%
+we just did a very detailed walk through
+ 
+
+00:00:31.279 --> 00:00:33.830 align:start position:0%
+we just did a very detailed walk through
+the<00:00:31.519><c> code</c><00:00:32.320><c> uh</c><00:00:32.480><c> first</c><00:00:32.719><c> it</c><00:00:32.960><c> will</c><00:00:33.120><c> be</c><00:00:33.200><c> boring</c><00:00:33.680><c> uh</c>
+
+00:00:33.830 --> 00:00:33.840 align:start position:0%
+the code uh first it will be boring uh
+ 
+
+00:00:33.840 --> 00:00:35.670 align:start position:0%
+the code uh first it will be boring uh
+second<00:00:34.160><c> it</c><00:00:34.320><c> will</c><00:00:34.399><c> be</c><00:00:34.480><c> a</c><00:00:34.640><c> long</c><00:00:34.800><c> video</c><00:00:35.280><c> and</c><00:00:35.440><c> then</c>
+
+00:00:35.670 --> 00:00:35.680 align:start position:0%
+second it will be a long video and then
+ 
+
+00:00:35.680 --> 00:00:38.310 align:start position:0%
+second it will be a long video and then
+third<00:00:36.399><c> uh</c><00:00:36.480><c> it's</c><00:00:36.719><c> just</c><00:00:37.120><c> uh</c><00:00:37.280><c> not</c><00:00:37.600><c> something</c><00:00:37.920><c> that</c>
+
+00:00:38.310 --> 00:00:38.320 align:start position:0%
+third uh it's just uh not something that
+ 
+
+00:00:38.320 --> 00:00:40.470 align:start position:0%
+third uh it's just uh not something that
+anyone<00:00:38.640><c> would</c><00:00:38.879><c> enjoy</c><00:00:39.280><c> because</c><00:00:40.160><c> uh</c><00:00:40.320><c> you</c><00:00:40.399><c> know</c>
+
+00:00:40.470 --> 00:00:40.480 align:start position:0%
+anyone would enjoy because uh you know
+ 
+
+00:00:40.480 --> 00:00:42.150 align:start position:0%
+anyone would enjoy because uh you know
+you're<00:00:40.800><c> looking</c><00:00:40.960><c> at</c><00:00:41.120><c> just</c><00:00:41.360><c> code</c><00:00:41.600><c> and</c><00:00:42.000><c> uh</c>
+
+00:00:42.150 --> 00:00:42.160 align:start position:0%
+you're looking at just code and uh
+ 
+
+00:00:42.160 --> 00:00:43.830 align:start position:0%
+you're looking at just code and uh
+really<00:00:42.480><c> the</c><00:00:42.640><c> the</c><00:00:42.879><c> only</c><00:00:43.040><c> reason</c><00:00:43.360><c> only</c><00:00:43.600><c> time</c><00:00:43.680><c> you</c>
+
+00:00:43.830 --> 00:00:43.840 align:start position:0%
+really the the only reason only time you
+ 
+
+00:00:43.840 --> 00:00:44.950 align:start position:0%
+really the the only reason only time you
+want<00:00:43.920><c> to</c><00:00:44.000><c> look</c><00:00:44.160><c> through</c><00:00:44.239><c> other</c><00:00:44.480><c> code</c><00:00:44.640><c> is</c><00:00:44.800><c> when</c>
+
+00:00:44.950 --> 00:00:44.960 align:start position:0%
+want to look through other code is when
+ 
+
+00:00:44.960 --> 00:00:46.869 align:start position:0%
+want to look through other code is when
+you're<00:00:45.120><c> actually</c><00:00:45.360><c> working</c><00:00:45.680><c> through</c><00:00:45.920><c> it.</c><00:00:46.480><c> So</c><00:00:46.640><c> I</c>
+
+00:00:46.869 --> 00:00:46.879 align:start position:0%
+you're actually working through it. So I
+ 
+
+00:00:46.879 --> 00:00:48.389 align:start position:0%
+you're actually working through it. So I
+would<00:00:47.039><c> recommend</c><00:00:47.440><c> when</c><00:00:47.680><c> you</c><00:00:47.840><c> get</c><00:00:47.920><c> to</c><00:00:48.079><c> your</c><00:00:48.239><c> own</c>
+
+00:00:48.389 --> 00:00:48.399 align:start position:0%
+would recommend when you get to your own
+ 
+
+00:00:48.399 --> 00:00:49.590 align:start position:0%
+would recommend when you get to your own
+project<00:00:48.640><c> that's</c><00:00:48.879><c> when</c><00:00:49.039><c> you</c><00:00:49.200><c> start</c><00:00:49.360><c> working</c>
+
+00:00:49.590 --> 00:00:49.600 align:start position:0%
+project that's when you start working
+ 
+
+00:00:49.600 --> 00:00:51.590 align:start position:0%
+project that's when you start working
+through<00:00:49.840><c> the</c><00:00:50.000><c> the</c><00:00:50.399><c> code</c><00:00:50.559><c> and</c><00:00:51.039><c> maybe</c><00:00:51.280><c> try</c><00:00:51.520><c> to</c>
+
+00:00:51.590 --> 00:00:51.600 align:start position:0%
+through the the code and maybe try to
+ 
+
+00:00:51.600 --> 00:00:52.869 align:start position:0%
+through the the code and maybe try to
+implement<00:00:51.920><c> your</c><00:00:52.160><c> own</c><00:00:52.239><c> thing</c><00:00:52.399><c> or</c><00:00:52.640><c> you</c><00:00:52.800><c> can</c>
+
+00:00:52.869 --> 00:00:52.879 align:start position:0%
+implement your own thing or you can
+ 
+
+00:00:52.879 --> 00:00:54.310 align:start position:0%
+implement your own thing or you can
+start<00:00:53.039><c> with</c><00:00:53.120><c> the</c><00:00:53.280><c> code</c><00:00:53.520><c> repository</c><00:00:54.000><c> we</c><00:00:54.160><c> have</c>
+
+00:00:54.310 --> 00:00:54.320 align:start position:0%
+start with the code repository we have
+ 
+
+00:00:54.320 --> 00:00:56.470 align:start position:0%
+start with the code repository we have
+provided.<00:00:55.120><c> Still</c><00:00:55.600><c> uh</c><00:00:55.680><c> it's</c><00:00:55.920><c> always</c><00:00:56.160><c> good</c><00:00:56.320><c> to</c>
+
+00:00:56.470 --> 00:00:56.480 align:start position:0%
+provided. Still uh it's always good to
+ 
+
+00:00:56.480 --> 00:00:57.990 align:start position:0%
+provided. Still uh it's always good to
+start<00:00:56.640><c> with</c><00:00:56.800><c> a</c><00:00:56.960><c> big</c><00:00:57.120><c> picture</c><00:00:57.360><c> view.</c><00:00:57.600><c> So</c><00:00:57.840><c> let's</c>
+
+00:00:57.990 --> 00:00:58.000 align:start position:0%
+start with a big picture view. So let's
+ 
+
+00:00:58.000 --> 00:01:00.630 align:start position:0%
+start with a big picture view. So let's
+do<00:00:58.079><c> that</c><00:00:58.239><c> in</c><00:00:58.399><c> this</c><00:00:58.559><c> video.</c><00:00:59.120><c> Okay.</c><00:00:59.840><c> So</c><00:01:00.239><c> uh</c><00:01:00.399><c> yeah</c>
+
+00:01:00.630 --> 00:01:00.640 align:start position:0%
+do that in this video. Okay. So uh yeah
+ 
+
+00:01:00.640 --> 00:01:02.310 align:start position:0%
+do that in this video. Okay. So uh yeah
+this<00:01:00.800><c> this</c><00:01:01.039><c> is</c><00:01:01.359><c> uh</c><00:01:01.520><c> part</c><00:01:01.680><c> of</c><00:01:01.840><c> week</c><00:01:02.079><c> three.</c>
+
+00:01:02.310 --> 00:01:02.320 align:start position:0%
+this this is uh part of week three.
+ 
+
+00:01:02.320 --> 00:01:04.390 align:start position:0%
+this this is uh part of week three.
+There's<00:01:02.480><c> a</c><00:01:02.640><c> lesson</c><00:01:02.879><c> around</c><00:01:03.120><c> the</c><00:01:03.280><c> Qura</c><00:01:04.080><c> full</c>
+
+00:01:04.390 --> 00:01:04.400 align:start position:0%
+There's a lesson around the Qura full
+ 
+
+00:01:04.400 --> 00:01:06.710 align:start position:0%
+There's a lesson around the Qura full
+pipeline.<00:01:05.199><c> Uh</c><00:01:05.360><c> we</c><00:01:05.600><c> cover</c><00:01:05.840><c> both</c><00:01:06.000><c> the</c><00:01:06.240><c> training</c>
+
+00:01:06.710 --> 00:01:06.720 align:start position:0%
+pipeline. Uh we cover both the training
+ 
+
+00:01:06.720 --> 00:01:08.630 align:start position:0%
+pipeline. Uh we cover both the training
+and<00:01:07.119><c> evaluation</c><00:01:07.680><c> in</c><00:01:07.840><c> this</c><00:01:08.000><c> lesson.</c><00:01:08.320><c> I</c><00:01:08.479><c> will</c>
+
+00:01:08.630 --> 00:01:08.640 align:start position:0%
+and evaluation in this lesson. I will
+ 
+
+00:01:08.640 --> 00:01:10.630 align:start position:0%
+and evaluation in this lesson. I will
+talk<00:01:08.880><c> about</c><00:01:09.040><c> that</c><00:01:09.200><c> at</c><00:01:09.360><c> a</c><00:01:09.520><c> high</c><00:01:09.680><c> level</c><00:01:10.240><c> for</c><00:01:10.479><c> both</c>
+
+00:01:10.630 --> 00:01:10.640 align:start position:0%
+talk about that at a high level for both
+ 
+
+00:01:10.640 --> 00:01:13.510 align:start position:0%
+talk about that at a high level for both
+of<00:01:10.720><c> these</c><00:01:10.960><c> workflows.</c><00:01:12.000><c> Okay.</c><00:01:12.640><c> So</c><00:01:12.880><c> with</c><00:01:13.360><c> the</c>
+
+00:01:13.510 --> 00:01:13.520 align:start position:0%
+of these workflows. Okay. So with the
+ 
+
+00:01:13.520 --> 00:01:14.870 align:start position:0%
+of these workflows. Okay. So with the
+training<00:01:13.840><c> side</c><00:01:14.080><c> which</c><00:01:14.320><c> is</c><00:01:14.400><c> what</c><00:01:14.560><c> we</c><00:01:14.720><c> call</c>
+
+00:01:14.870 --> 00:01:14.880 align:start position:0%
+training side which is what we call
+ 
+
+00:01:14.880 --> 00:01:16.550 align:start position:0%
+training side which is what we call
+fine-tuning<00:01:15.520><c> because</c><00:01:15.680><c> we</c><00:01:15.840><c> are</c><00:01:16.159><c> taking</c><00:01:16.400><c> a</c>
+
+00:01:16.550 --> 00:01:16.560 align:start position:0%
+fine-tuning because we are taking a
+ 
+
+00:01:16.560 --> 00:01:18.870 align:start position:0%
+fine-tuning because we are taking a
+pre-trained<00:01:17.360><c> uh</c><00:01:17.520><c> instruct</c><00:01:18.000><c> model</c><00:01:18.560><c> and</c>
+
+00:01:18.870 --> 00:01:18.880 align:start position:0%
+pre-trained uh instruct model and
+ 
+
+00:01:18.880 --> 00:01:21.190 align:start position:0%
+pre-trained uh instruct model and
+training<00:01:19.200><c> it</c><00:01:19.360><c> on</c><00:01:19.520><c> our</c><00:01:19.759><c> own</c><00:01:19.920><c> custom</c><00:01:20.640><c> uh</c><00:01:20.720><c> our</c><00:01:20.960><c> own</c>
+
+00:01:21.190 --> 00:01:21.200 align:start position:0%
+training it on our own custom uh our own
+ 
+
+00:01:21.200 --> 00:01:23.350 align:start position:0%
+training it on our own custom uh our own
+data<00:01:21.439><c> set.</c><00:01:21.680><c> In</c><00:01:21.840><c> our</c><00:01:22.000><c> case</c><00:01:22.159><c> it's</c><00:01:22.400><c> Samsung</c><00:01:23.360><c> Sam</c>
+
+00:01:23.350 --> 00:01:23.360 align:start position:0%
+data set. In our case it's Samsung Sam
+ 
+
+00:01:23.360 --> 00:01:25.990 align:start position:0%
+data set. In our case it's Samsung Sam
+Samsung<00:01:23.920><c> summarization</c><00:01:24.640><c> data</c><00:01:24.960><c> set.</c><00:01:25.600><c> So</c><00:01:25.840><c> all</c>
+
+00:01:25.990 --> 00:01:26.000 align:start position:0%
+Samsung summarization data set. So all
+ 
+
+00:01:26.000 --> 00:01:28.630 align:start position:0%
+Samsung summarization data set. So all
+right<00:01:26.400><c> what</c><00:01:26.560><c> are</c><00:01:26.640><c> the</c><00:01:26.799><c> highle</c><00:01:27.200><c> steps</c><00:01:28.080><c> so</c><00:01:28.400><c> first</c>
+
+00:01:28.630 --> 00:01:28.640 align:start position:0%
+right what are the highle steps so first
+ 
+
+00:01:28.640 --> 00:01:30.469 align:start position:0%
+right what are the highle steps so first
+of<00:01:28.880><c> course</c><00:01:29.040><c> we</c><00:01:29.280><c> load</c><00:01:29.439><c> the</c><00:01:29.600><c> data</c><00:01:29.840><c> set</c><00:01:30.159><c> we</c><00:01:30.400><c> are</c>
+
+00:01:30.469 --> 00:01:30.479 align:start position:0%
+of course we load the data set we are
+ 
+
+00:01:30.479 --> 00:01:32.310 align:start position:0%
+of course we load the data set we are
+getting<00:01:30.640><c> this</c><00:01:30.799><c> directly</c><00:01:31.200><c> from</c><00:01:31.439><c> from</c><00:01:31.840><c> hugging</c>
+
+00:01:32.310 --> 00:01:32.320 align:start position:0%
+getting this directly from from hugging
+ 
+
+00:01:32.320 --> 00:01:34.789 align:start position:0%
+getting this directly from from hugging
+face<00:01:33.280><c> uh</c><00:01:33.360><c> the</c><00:01:33.600><c> next</c><00:01:33.680><c> step</c><00:01:33.920><c> is</c><00:01:34.079><c> pre-processing</c>
+
+00:01:34.789 --> 00:01:34.799 align:start position:0%
+face uh the next step is pre-processing
+ 
+
+00:01:34.799 --> 00:01:36.149 align:start position:0%
+face uh the next step is pre-processing
+I'll<00:01:35.040><c> walk</c><00:01:35.200><c> through</c><00:01:35.360><c> some</c><00:01:35.520><c> of</c><00:01:35.600><c> those</c><00:01:35.840><c> details</c>
+
+00:01:36.149 --> 00:01:36.159 align:start position:0%
+I'll walk through some of those details
+ 
+
+00:01:36.159 --> 00:01:37.670 align:start position:0%
+I'll walk through some of those details
+you<00:01:36.400><c> should</c><00:01:36.560><c> look</c><00:01:36.640><c> for</c><00:01:36.960><c> there's</c><00:01:37.119><c> a</c><00:01:37.280><c> full</c><00:01:37.439><c> video</c>
+
+00:01:37.670 --> 00:01:37.680 align:start position:0%
+you should look for there's a full video
+ 
+
+00:01:37.680 --> 00:01:39.590 align:start position:0%
+you should look for there's a full video
+we<00:01:37.920><c> are</c><00:01:38.079><c> putting</c><00:01:38.400><c> just</c><00:01:38.880><c> uh</c><00:01:39.040><c> that's</c><00:01:39.360><c> coming</c>
+
+00:01:39.590 --> 00:01:39.600 align:start position:0%
+we are putting just uh that's coming
+ 
+
+00:01:39.600 --> 00:01:41.109 align:start position:0%
+we are putting just uh that's coming
+right<00:01:39.840><c> after</c><00:01:40.079><c> this</c><00:01:40.240><c> one</c><00:01:40.479><c> which</c><00:01:40.720><c> is</c><00:01:40.880><c> going</c>
+
+00:01:41.109 --> 00:01:41.119 align:start position:0%
+right after this one which is going
+ 
+
+00:01:41.119 --> 00:01:42.550 align:start position:0%
+right after this one which is going
+through<00:01:41.280><c> the</c><00:01:41.520><c> the</c><00:01:41.840><c> details</c><00:01:42.159><c> of</c><00:01:42.400><c> the</c>
+
+00:01:42.550 --> 00:01:42.560 align:start position:0%
+through the the details of the
+ 
+
+00:01:42.560 --> 00:01:44.230 align:start position:0%
+through the the details of the
+pre-processing<00:01:43.200><c> the</c><00:01:43.360><c> most</c><00:01:43.600><c> important</c><00:01:43.920><c> really</c>
+
+00:01:44.230 --> 00:01:44.240 align:start position:0%
+pre-processing the most important really
+ 
+
+00:01:44.240 --> 00:01:45.749 align:start position:0%
+pre-processing the most important really
+part<00:01:44.960><c> uh</c><00:01:45.040><c> when</c><00:01:45.280><c> you're</c><00:01:45.439><c> talking</c><00:01:45.600><c> about</c>
+
+00:01:45.749 --> 00:01:45.759 align:start position:0%
+part uh when you're talking about
+ 
+
+00:01:45.759 --> 00:01:47.910 align:start position:0%
+part uh when you're talking about
+fine-tuning<00:01:46.320><c> LLMs</c><00:01:47.200><c> uh</c><00:01:47.360><c> then</c><00:01:47.520><c> we</c><00:01:47.680><c> have</c><00:01:47.759><c> the</c>
+
+00:01:47.910 --> 00:01:47.920 align:start position:0%
+fine-tuning LLMs uh then we have the
+ 
+
+00:01:47.920 --> 00:01:49.590 align:start position:0%
+fine-tuning LLMs uh then we have the
+model<00:01:48.159><c> setup</c><00:01:48.479><c> you</c><00:01:48.640><c> load</c><00:01:48.799><c> the</c><00:01:48.960><c> base</c><00:01:49.200><c> model</c><00:01:49.439><c> and</c>
+
+00:01:49.590 --> 00:01:49.600 align:start position:0%
+model setup you load the base model and
+ 
+
+00:01:49.600 --> 00:01:51.429 align:start position:0%
+model setup you load the base model and
+the<00:01:49.759><c> lura</c><00:01:50.079><c> adapters</c><00:01:50.640><c> and</c><00:01:50.799><c> you</c><00:01:50.880><c> put</c><00:01:51.040><c> together</c><00:01:51.280><c> a</c>
+
+00:01:51.429 --> 00:01:51.439 align:start position:0%
+the lura adapters and you put together a
+ 
+
+00:01:51.439 --> 00:01:53.749 align:start position:0%
+the lura adapters and you put together a
+pft<00:01:51.840><c> model</c><00:01:52.720><c> uh</c><00:01:52.799><c> then</c><00:01:53.040><c> there's</c><00:01:53.280><c> the</c><00:01:53.439><c> training</c>
+
+00:01:53.749 --> 00:01:53.759 align:start position:0%
+pft model uh then there's the training
+ 
+
+00:01:53.759 --> 00:01:55.749 align:start position:0%
+pft model uh then there's the training
+step<00:01:54.399><c> and</c><00:01:54.799><c> that's</c><00:01:55.119><c> where</c><00:01:55.360><c> you're</c><00:01:55.520><c> training</c>
+
+00:01:55.749 --> 00:01:55.759 align:start position:0%
+step and that's where you're training
+ 
+
+00:01:55.759 --> 00:01:58.550 align:start position:0%
+step and that's where you're training
+the<00:01:55.920><c> the</c><00:01:56.479><c> uh</c><00:01:56.479><c> the</c><00:01:56.799><c> LoRa</c><00:01:57.200><c> adapters</c><00:01:57.759><c> on</c><00:01:58.079><c> the</c><00:01:58.320><c> data</c>
+
+00:01:58.550 --> 00:01:58.560 align:start position:0%
+the the uh the LoRa adapters on the data
+ 
+
+00:01:58.560 --> 00:02:00.310 align:start position:0%
+the the uh the LoRa adapters on the data
+set<00:01:58.799><c> that</c><00:01:58.960><c> has</c><00:01:59.200><c> been</c><00:01:59.280><c> proc</c><00:01:59.680><c> pre-process</c><00:02:00.159><c> in</c>
+
+00:02:00.310 --> 00:02:00.320 align:start position:0%
+set that has been proc pre-process in
+ 
+
+00:02:00.320 --> 00:02:02.310 align:start position:0%
+set that has been proc pre-process in
+the<00:02:00.479><c> right</c><00:02:00.640><c> structure</c><00:02:01.360><c> and</c><00:02:01.600><c> finally</c><00:02:01.920><c> once</c><00:02:02.159><c> the</c>
+
+00:02:02.310 --> 00:02:02.320 align:start position:0%
+the right structure and finally once the
+ 
+
+00:02:02.320 --> 00:02:03.510 align:start position:0%
+the right structure and finally once the
+training<00:02:02.560><c> is</c><00:02:02.719><c> done</c><00:02:02.880><c> you're</c><00:02:03.040><c> going</c><00:02:03.119><c> to</c><00:02:03.200><c> save</c>
+
+00:02:03.510 --> 00:02:03.520 align:start position:0%
+training is done you're going to save
+ 
+
+00:02:03.520 --> 00:02:05.990 align:start position:0%
+training is done you're going to save
+these<00:02:03.920><c> these</c><00:02:04.240><c> adapters</c><00:02:04.719><c> which</c><00:02:05.119><c> uh</c><00:02:05.280><c> I'll</c><00:02:05.840><c> uh</c>
+
+00:02:05.990 --> 00:02:06.000 align:start position:0%
+these these adapters which uh I'll uh
+ 
+
+00:02:06.000 --> 00:02:07.830 align:start position:0%
+these these adapters which uh I'll uh
+next<00:02:06.320><c> we'll</c><00:02:06.560><c> talk</c><00:02:06.799><c> about</c><00:02:07.040><c> the</c><00:02:07.280><c> evaluation</c>
+
+00:02:07.830 --> 00:02:07.840 align:start position:0%
+next we'll talk about the evaluation
+ 
+
+00:02:07.840 --> 00:02:10.229 align:start position:0%
+next we'll talk about the evaluation
+workflow.<00:02:08.560><c> All</c><00:02:08.560><c> right</c><00:02:08.959><c> so</c><00:02:09.200><c> let</c><00:02:09.360><c> me</c><00:02:09.759><c> uh</c><00:02:09.920><c> still</c>
+
+00:02:10.229 --> 00:02:10.239 align:start position:0%
+workflow. All right so let me uh still
+ 
+
+00:02:10.239 --> 00:02:11.830 align:start position:0%
+workflow. All right so let me uh still
+talk<00:02:10.399><c> about</c><00:02:10.640><c> a</c><00:02:10.879><c> very</c><00:02:11.039><c> high</c><00:02:11.200><c> level</c><00:02:11.440><c> some</c><00:02:11.599><c> of</c><00:02:11.680><c> the</c>
+
+00:02:11.830 --> 00:02:11.840 align:start position:0%
+talk about a very high level some of the
+ 
+
+00:02:11.840 --> 00:02:13.190 align:start position:0%
+talk about a very high level some of the
+important<00:02:12.160><c> things</c><00:02:12.319><c> that</c><00:02:12.720><c> you</c><00:02:12.879><c> should</c><00:02:13.040><c> be</c>
+
+00:02:13.190 --> 00:02:13.200 align:start position:0%
+important things that you should be
+ 
+
+00:02:13.200 --> 00:02:15.350 align:start position:0%
+important things that you should be
+watching<00:02:13.440><c> out</c><00:02:13.680><c> for.</c><00:02:14.080><c> So</c><00:02:14.480><c> first</c><00:02:14.720><c> when</c><00:02:14.959><c> we</c><00:02:15.120><c> load</c>
+
+00:02:15.350 --> 00:02:15.360 align:start position:0%
+watching out for. So first when we load
+ 
+
+00:02:15.360 --> 00:02:16.710 align:start position:0%
+watching out for. So first when we load
+the<00:02:15.520><c> data</c><00:02:15.680><c> set</c><00:02:15.920><c> again</c><00:02:16.080><c> we're</c><00:02:16.239><c> getting</c><00:02:16.400><c> it</c><00:02:16.560><c> from</c>
+
+00:02:16.710 --> 00:02:16.720 align:start position:0%
+the data set again we're getting it from
+ 
+
+00:02:16.720 --> 00:02:20.309 align:start position:0%
+the data set again we're getting it from
+the<00:02:17.200><c> uh</c><00:02:17.280><c> hugging</c><00:02:17.760><c> face</c><00:02:18.239><c> uh</c><00:02:18.560><c> platform</c><00:02:19.599><c> and</c><00:02:20.160><c> uh</c>
+
+00:02:20.309 --> 00:02:20.319 align:start position:0%
+the uh hugging face uh platform and uh
+ 
+
+00:02:20.319 --> 00:02:21.670 align:start position:0%
+the uh hugging face uh platform and uh
+for<00:02:20.480><c> the</c><00:02:20.640><c> training</c><00:02:20.879><c> workflow</c><00:02:21.280><c> of</c><00:02:21.440><c> course</c><00:02:21.520><c> we</c>
+
+00:02:21.670 --> 00:02:21.680 align:start position:0%
+for the training workflow of course we
+ 
+
+00:02:21.680 --> 00:02:23.750 align:start position:0%
+for the training workflow of course we
+need<00:02:21.760><c> the</c><00:02:22.000><c> training</c><00:02:22.480><c> split</c><00:02:22.879><c> of</c><00:02:23.040><c> it.</c><00:02:23.440><c> uh</c><00:02:23.599><c> you</c>
+
+00:02:23.750 --> 00:02:23.760 align:start position:0%
+need the training split of it. uh you
+ 
+
+00:02:23.760 --> 00:02:26.949 align:start position:0%
+need the training split of it. uh you
+can<00:02:23.920><c> choose</c><00:02:24.400><c> u</c><00:02:25.200><c> uh</c><00:02:25.360><c> to</c><00:02:25.920><c> work</c><00:02:26.080><c> with</c><00:02:26.239><c> a</c><00:02:26.480><c> smaller</c>
+
+00:02:26.949 --> 00:02:26.959 align:start position:0%
+can choose u uh to work with a smaller
+ 
+
+00:02:26.959 --> 00:02:30.309 align:start position:0%
+can choose u uh to work with a smaller
+subset<00:02:27.920><c> of</c><00:02:28.160><c> the</c><00:02:28.800><c> uh</c><00:02:28.959><c> of</c><00:02:29.120><c> the</c><00:02:29.280><c> data</c><00:02:29.520><c> set</c><00:02:29.760><c> or</c>
+
+00:02:30.309 --> 00:02:30.319 align:start position:0%
+subset of the uh of the data set or
+ 
+
+00:02:30.319 --> 00:02:33.990 align:start position:0%
+subset of the uh of the data set or
+depending<00:02:30.640><c> on</c><00:02:31.040><c> your</c><00:02:31.680><c> uh</c><00:02:32.319><c> choice</c><00:02:32.640><c> of</c><00:02:32.879><c> how</c><00:02:33.120><c> long</c>
+
+00:02:33.990 --> 00:02:34.000 align:start position:0%
+depending on your uh choice of how long
+ 
+
+00:02:34.000 --> 00:02:36.229 align:start position:0%
+depending on your uh choice of how long
+you<00:02:34.160><c> can</c><00:02:34.400><c> you</c><00:02:34.640><c> want</c><00:02:34.959><c> the</c><00:02:35.200><c> training</c><00:02:35.840><c> uh</c>
+
+00:02:36.229 --> 00:02:36.239 align:start position:0%
+you can you want the training uh
+ 
+
+00:02:36.239 --> 00:02:38.150 align:start position:0%
+you can you want the training uh
+pipeline<00:02:36.640><c> to</c><00:02:36.800><c> run.</c><00:02:37.280><c> Uh</c><00:02:37.440><c> but</c><00:02:37.680><c> yeah,</c><00:02:37.840><c> that's</c>
+
+00:02:38.150 --> 00:02:38.160 align:start position:0%
+pipeline to run. Uh but yeah, that's
+ 
+
+00:02:38.160 --> 00:02:40.229 align:start position:0%
+pipeline to run. Uh but yeah, that's
+part<00:02:38.319><c> of</c><00:02:38.400><c> it</c><00:02:38.560><c> is</c><00:02:38.800><c> just</c><00:02:39.280><c> picking</c><00:02:39.599><c> the</c><00:02:39.760><c> split.</c>
+
+00:02:40.229 --> 00:02:40.239 align:start position:0%
+part of it is just picking the split.
+ 
+
+00:02:40.239 --> 00:02:42.949 align:start position:0%
+part of it is just picking the split.
+Okay.<00:02:40.800><c> Uh</c><00:02:41.040><c> on</c><00:02:41.200><c> the</c><00:02:41.360><c> pre-processing</c><00:02:42.160><c> side,</c><00:02:42.720><c> I</c>
+
+00:02:42.949 --> 00:02:42.959 align:start position:0%
+Okay. Uh on the pre-processing side, I
+ 
+
+00:02:42.959 --> 00:02:45.670 align:start position:0%
+Okay. Uh on the pre-processing side, I
+want<00:02:43.120><c> to</c><00:02:43.519><c> caution</c><00:02:43.840><c> you</c><00:02:44.080><c> that</c><00:02:44.879><c> the</c><00:02:45.120><c> hardest</c>
+
+00:02:45.670 --> 00:02:45.680 align:start position:0%
+want to caution you that the hardest
+ 
+
+00:02:45.680 --> 00:02:48.550 align:start position:0%
+want to caution you that the hardest
+part<00:02:46.400><c> in</c><00:02:46.800><c> LLM</c><00:02:47.280><c> fine-tuning</c><00:02:47.840><c> really</c><00:02:48.080><c> the</c><00:02:48.239><c> the</c>
+
+00:02:48.550 --> 00:02:48.560 align:start position:0%
+part in LLM fine-tuning really the the
+ 
+
+00:02:48.560 --> 00:02:51.750 align:start position:0%
+part in LLM fine-tuning really the the
+part<00:02:48.800><c> where</c><00:02:49.040><c> things</c><00:02:49.360><c> go</c><00:02:49.599><c> south</c><00:02:50.560><c> is</c><00:02:51.360><c> uh</c><00:02:51.519><c> most</c>
+
+00:02:51.750 --> 00:02:51.760 align:start position:0%
+part where things go south is uh most
+ 
+
+00:02:51.760 --> 00:02:54.070 align:start position:0%
+part where things go south is uh most
+likely<00:02:52.080><c> to</c><00:02:52.319><c> go</c><00:02:52.480><c> south</c><00:02:52.720><c> or</c><00:02:52.959><c> go</c><00:02:53.200><c> wrong</c><00:02:53.519><c> is</c><00:02:53.840><c> the</c>
+
+00:02:54.070 --> 00:02:54.080 align:start position:0%
+likely to go south or go wrong is the
+ 
+
+00:02:54.080 --> 00:02:56.630 align:start position:0%
+likely to go south or go wrong is the
+pre-processing<00:02:54.720><c> stage.</c><00:02:55.599><c> I</c><00:02:55.840><c> found</c><00:02:56.160><c> this</c><00:02:56.400><c> one</c>
+
+00:02:56.630 --> 00:02:56.640 align:start position:0%
+pre-processing stage. I found this one
+ 
+
+00:02:56.640 --> 00:02:59.910 align:start position:0%
+pre-processing stage. I found this one
+to<00:02:56.800><c> be</c><00:02:56.959><c> the</c><00:02:57.200><c> most</c><00:02:57.519><c> confusing</c><00:02:58.000><c> to</c><00:02:58.319><c> me.</c><00:02:59.120><c> uh</c><00:02:59.280><c> I</c>
+
+00:02:59.910 --> 00:02:59.920 align:start position:0%
+to be the most confusing to me. uh I
+ 
+
+00:02:59.920 --> 00:03:03.430 align:start position:0%
+to be the most confusing to me. uh I
+found<00:03:00.800><c> myself</c><00:03:01.599><c> imagining</c><00:03:02.159><c> I</c><00:03:02.400><c> understood</c><00:03:03.120><c> what</c>
+
+00:03:03.430 --> 00:03:03.440 align:start position:0%
+found myself imagining I understood what
+ 
+
+00:03:03.440 --> 00:03:06.630 align:start position:0%
+found myself imagining I understood what
+is<00:03:03.760><c> happening</c><00:03:04.720><c> and</c><00:03:05.840><c> uh</c><00:03:06.000><c> going</c><00:03:06.239><c> through</c><00:03:06.400><c> the</c>
+
+00:03:06.630 --> 00:03:06.640 align:start position:0%
+is happening and uh going through the
+ 
+
+00:03:06.640 --> 00:03:08.229 align:start position:0%
+is happening and uh going through the
+exercise<00:03:07.280><c> and</c><00:03:07.519><c> then</c><00:03:07.760><c> running</c><00:03:08.000><c> into</c>
+
+00:03:08.229 --> 00:03:08.239 align:start position:0%
+exercise and then running into
+ 
+
+00:03:08.239 --> 00:03:10.149 align:start position:0%
+exercise and then running into
+challenges<00:03:08.879><c> and</c><00:03:09.120><c> then</c><00:03:09.360><c> going</c><00:03:09.680><c> deeper</c><00:03:09.920><c> and</c>
+
+00:03:10.149 --> 00:03:10.159 align:start position:0%
+challenges and then going deeper and
+ 
+
+00:03:10.159 --> 00:03:12.070 align:start position:0%
+challenges and then going deeper and
+thinking<00:03:10.480><c> oh</c><00:03:10.800><c> now</c><00:03:11.040><c> I</c><00:03:11.200><c> get</c><00:03:11.360><c> it</c><00:03:11.519><c> I</c><00:03:11.680><c> had</c><00:03:11.840><c> missed</c>
+
+00:03:12.070 --> 00:03:12.080 align:start position:0%
+thinking oh now I get it I had missed
+ 
+
+00:03:12.080 --> 00:03:13.670 align:start position:0%
+thinking oh now I get it I had missed
+this<00:03:12.239><c> part</c><00:03:12.800><c> and</c><00:03:12.959><c> then</c><00:03:13.200><c> going</c><00:03:13.360><c> through</c><00:03:13.519><c> the</c>
+
+00:03:13.670 --> 00:03:13.680 align:start position:0%
+this part and then going through the
+ 
+
+00:03:13.680 --> 00:03:15.190 align:start position:0%
+this part and then going through the
+exercise<00:03:14.000><c> and</c><00:03:14.159><c> then</c><00:03:14.319><c> finding</c><00:03:14.560><c> out</c><00:03:14.800><c> I</c><00:03:14.959><c> had</c>
+
+00:03:15.190 --> 00:03:15.200 align:start position:0%
+exercise and then finding out I had
+ 
+
+00:03:15.200 --> 00:03:17.350 align:start position:0%
+exercise and then finding out I had
+still<00:03:15.440><c> missed</c><00:03:15.760><c> something</c><00:03:16.080><c> along</c><00:03:16.400><c> the</c><00:03:16.560><c> way</c><00:03:17.120><c> and</c>
+
+00:03:17.350 --> 00:03:17.360 align:start position:0%
+still missed something along the way and
+ 
+
+00:03:17.360 --> 00:03:20.309 align:start position:0%
+still missed something along the way and
+so<00:03:17.680><c> I</c><00:03:18.000><c> do</c><00:03:18.159><c> want</c><00:03:18.319><c> to</c><00:03:18.560><c> talk</c><00:03:19.200><c> uh</c><00:03:19.760><c> you</c><00:03:19.840><c> know</c><00:03:20.000><c> this</c><00:03:20.159><c> is</c>
+
+00:03:20.309 --> 00:03:20.319 align:start position:0%
+so I do want to talk uh you know this is
+ 
+
+00:03:20.319 --> 00:03:21.910 align:start position:0%
+so I do want to talk uh you know this is
+why<00:03:20.400><c> we</c><00:03:20.720><c> decided</c><00:03:21.040><c> to</c><00:03:21.120><c> create</c><00:03:21.280><c> a</c><00:03:21.440><c> very</c><00:03:21.680><c> separate</c>
+
+00:03:21.910 --> 00:03:21.920 align:start position:0%
+why we decided to create a very separate
+ 
+
+00:03:21.920 --> 00:03:23.110 align:start position:0%
+why we decided to create a very separate
+video<00:03:22.159><c> spec</c><00:03:22.480><c> specifically</c><00:03:22.959><c> about</c>
+
+00:03:23.110 --> 00:03:23.120 align:start position:0%
+video spec specifically about
+ 
+
+00:03:23.120 --> 00:03:25.190 align:start position:0%
+video spec specifically about
+pre-processing<00:03:24.159><c> so</c><00:03:24.480><c> yeah</c><00:03:24.640><c> in</c><00:03:24.800><c> in</c><00:03:25.120><c> the</c>
+
+00:03:25.190 --> 00:03:25.200 align:start position:0%
+pre-processing so yeah in in the
+ 
+
+00:03:25.200 --> 00:03:26.790 align:start position:0%
+pre-processing so yeah in in the
+pre-processing<00:03:25.840><c> stages</c><00:03:26.319><c> some</c><00:03:26.480><c> important</c>
+
+00:03:26.790 --> 00:03:26.800 align:start position:0%
+pre-processing stages some important
+ 
+
+00:03:26.800 --> 00:03:28.790 align:start position:0%
+pre-processing stages some important
+steps<00:03:27.120><c> here</c><00:03:27.360><c> so</c><00:03:27.599><c> we</c><00:03:27.840><c> start</c><00:03:28.000><c> with</c><00:03:28.159><c> the</c><00:03:28.319><c> sample</c>
+
+00:03:28.790 --> 00:03:28.800 align:start position:0%
+steps here so we start with the sample
+ 
+
+00:03:28.800 --> 00:03:30.789 align:start position:0%
+steps here so we start with the sample
+Right?<00:03:28.959><c> The</c><00:03:29.120><c> data</c><00:03:29.360><c> set</c><00:03:29.519><c> includes</c><00:03:29.920><c> samples,</c>
+
+00:03:30.789 --> 00:03:30.799 align:start position:0%
+Right? The data set includes samples,
+ 
+
+00:03:30.799 --> 00:03:32.390 align:start position:0%
+Right? The data set includes samples,
+you<00:03:30.959><c> can</c><00:03:31.120><c> call</c><00:03:31.200><c> them</c><00:03:31.440><c> examples</c><00:03:32.000><c> of</c>
+
+00:03:32.390 --> 00:03:32.400 align:start position:0%
+you can call them examples of
+ 
+
+00:03:32.400 --> 00:03:34.390 align:start position:0%
+you can call them examples of
+conversations<00:03:33.040><c> and</c><00:03:33.280><c> then</c><00:03:33.440><c> the</c><00:03:33.599><c> the</c><00:03:34.080><c> ground</c>
+
+00:03:34.390 --> 00:03:34.400 align:start position:0%
+conversations and then the the ground
+ 
+
+00:03:34.400 --> 00:03:37.670 align:start position:0%
+conversations and then the the ground
+truth<00:03:35.040><c> summary</c><00:03:35.440><c> of</c><00:03:35.680><c> it.</c><00:03:36.319><c> So</c><00:03:36.560><c> they</c><00:03:36.799><c> had</c><00:03:37.040><c> to</c><00:03:37.120><c> be</c>
+
+00:03:37.670 --> 00:03:37.680 align:start position:0%
+truth summary of it. So they had to be
+ 
+
+00:03:37.680 --> 00:03:40.309 align:start position:0%
+truth summary of it. So they had to be
+structured<00:03:38.159><c> a</c><00:03:38.319><c> certain</c><00:03:38.640><c> way</c><00:03:38.879><c> to</c><00:03:39.200><c> train</c><00:03:39.840><c> uh</c><00:03:39.920><c> to</c>
+
+00:03:40.309 --> 00:03:40.319 align:start position:0%
+structured a certain way to train uh to
+ 
+
+00:03:40.319 --> 00:03:42.390 align:start position:0%
+structured a certain way to train uh to
+feed<00:03:40.560><c> into</c><00:03:40.799><c> the</c><00:03:40.959><c> training</c><00:03:41.200><c> pipeline.</c><00:03:41.920><c> And</c><00:03:42.080><c> so</c>
+
+00:03:42.390 --> 00:03:42.400 align:start position:0%
+feed into the training pipeline. And so
+ 
+
+00:03:42.400 --> 00:03:44.390 align:start position:0%
+feed into the training pipeline. And so
+the<00:03:42.640><c> high</c><00:03:42.799><c> level</c><00:03:43.040><c> steps</c><00:03:43.280><c> there</c><00:03:43.519><c> are</c><00:03:44.000><c> you</c><00:03:44.239><c> take</c>
+
+00:03:44.390 --> 00:03:44.400 align:start position:0%
+the high level steps there are you take
+ 
+
+00:03:44.400 --> 00:03:47.110 align:start position:0%
+the high level steps there are you take
+the<00:03:44.640><c> original</c><00:03:45.120><c> example</c><00:03:46.239><c> you</c><00:03:46.560><c> build</c><00:03:46.879><c> the</c>
+
+00:03:47.110 --> 00:03:47.120 align:start position:0%
+the original example you build the
+ 
+
+00:03:47.120 --> 00:03:49.670 align:start position:0%
+the original example you build the
+messages<00:03:47.599><c> from</c><00:03:47.840><c> it.</c><00:03:48.319><c> uh</c><00:03:48.480><c> if</c><00:03:48.720><c> you</c><00:03:48.959><c> remember</c><00:03:49.440><c> if</c>
+
+00:03:49.670 --> 00:03:49.680 align:start position:0%
+messages from it. uh if you remember if
+ 
+
+00:03:49.680 --> 00:03:52.070 align:start position:0%
+messages from it. uh if you remember if
+you<00:03:49.840><c> worked</c><00:03:50.080><c> with</c><00:03:50.720><c> uh</c><00:03:50.799><c> let's</c><00:03:51.040><c> say</c><00:03:51.200><c> the</c><00:03:51.440><c> API</c>
+
+00:03:52.070 --> 00:03:52.080 align:start position:0%
+you worked with uh let's say the API
+ 
+
+00:03:52.080 --> 00:03:56.070 align:start position:0%
+you worked with uh let's say the API
+based<00:03:52.720><c> um</c><00:03:53.200><c> chat</c><00:03:53.680><c> completion</c><00:03:54.560><c> uh</c><00:03:54.799><c> APIs</c><00:03:55.840><c> uh</c><00:03:55.920><c> you</c>
+
+00:03:56.070 --> 00:03:56.080 align:start position:0%
+based um chat completion uh APIs uh you
+ 
+
+00:03:56.080 --> 00:03:57.030 align:start position:0%
+based um chat completion uh APIs uh you
+will<00:03:56.159><c> see</c><00:03:56.239><c> that</c><00:03:56.400><c> you</c><00:03:56.560><c> actually</c><00:03:56.720><c> have</c><00:03:56.879><c> to</c>
+
+00:03:57.030 --> 00:03:57.040 align:start position:0%
+will see that you actually have to
+ 
+
+00:03:57.040 --> 00:03:59.190 align:start position:0%
+will see that you actually have to
+convert<00:03:57.280><c> the</c><00:03:57.680><c> your</c><00:03:58.000><c> prompt</c><00:03:58.400><c> into</c><00:03:58.640><c> a</c><00:03:58.879><c> message</c>
+
+00:03:59.190 --> 00:03:59.200 align:start position:0%
+convert the your prompt into a message
+ 
+
+00:03:59.200 --> 00:04:01.670 align:start position:0%
+convert the your prompt into a message
+structure.<00:03:59.599><c> So</c><00:03:59.840><c> there's</c><00:04:00.080><c> a</c><00:04:00.720><c> user</c><00:04:01.120><c> prompt</c><00:04:01.439><c> and</c>
+
+00:04:01.670 --> 00:04:01.680 align:start position:0%
+structure. So there's a user prompt and
+ 
+
+00:04:01.680 --> 00:04:04.309 align:start position:0%
+structure. So there's a user prompt and
+then<00:04:02.319><c> uh</c><00:04:02.480><c> there's</c><00:04:02.799><c> a</c><00:04:03.200><c> system</c><00:04:03.519><c> or</c><00:04:03.760><c> assistant</c>
+
+00:04:04.309 --> 00:04:04.319 align:start position:0%
+then uh there's a system or assistant
+ 
+
+00:04:04.319 --> 00:04:05.750 align:start position:0%
+then uh there's a system or assistant
+prompt<00:04:04.640><c> and</c><00:04:04.879><c> you</c><00:04:05.040><c> just</c><00:04:05.200><c> put</c><00:04:05.360><c> them</c><00:04:05.519><c> together</c>
+
+00:04:05.750 --> 00:04:05.760 align:start position:0%
+prompt and you just put them together
+ 
+
+00:04:05.760 --> 00:04:07.270 align:start position:0%
+prompt and you just put them together
+right<00:04:05.920><c> the</c><00:04:06.080><c> role</c><00:04:06.239><c> and</c><00:04:06.400><c> the</c><00:04:06.560><c> content</c><00:04:06.879><c> structure</c>
+
+00:04:07.270 --> 00:04:07.280 align:start position:0%
+right the role and the content structure
+ 
+
+00:04:07.280 --> 00:04:09.670 align:start position:0%
+right the role and the content structure
+of<00:04:07.519><c> chat</c><00:04:08.319><c> uh</c><00:04:08.480><c> messages.</c><00:04:08.959><c> So</c><00:04:09.120><c> that's</c><00:04:09.280><c> the</c><00:04:09.519><c> first</c>
+
+00:04:09.670 --> 00:04:09.680 align:start position:0%
+of chat uh messages. So that's the first
+ 
+
+00:04:09.680 --> 00:04:11.589 align:start position:0%
+of chat uh messages. So that's the first
+step.<00:04:10.159><c> Uh</c><00:04:10.400><c> next</c><00:04:10.560><c> we</c><00:04:10.720><c> have</c><00:04:10.799><c> the</c><00:04:11.040><c> chat</c><00:04:11.280><c> template</c>
+
+00:04:11.589 --> 00:04:11.599 align:start position:0%
+step. Uh next we have the chat template
+ 
+
+00:04:11.599 --> 00:04:13.830 align:start position:0%
+step. Uh next we have the chat template
+being<00:04:11.840><c> applied</c><00:04:12.080><c> to</c><00:04:12.239><c> it.</c><00:04:12.720><c> We'll</c><00:04:12.959><c> again</c><00:04:13.360><c> talk</c><00:04:13.599><c> in</c>
+
+00:04:13.830 --> 00:04:13.840 align:start position:0%
+being applied to it. We'll again talk in
+ 
+
+00:04:13.840 --> 00:04:16.069 align:start position:0%
+being applied to it. We'll again talk in
+detail<00:04:14.239><c> about</c><00:04:14.480><c> it</c><00:04:14.799><c> why</c><00:04:15.200><c> uh</c><00:04:15.360><c> chat</c><00:04:15.599><c> template</c><00:04:15.920><c> and</c>
+
+00:04:16.069 --> 00:04:16.079 align:start position:0%
+detail about it why uh chat template and
+ 
+
+00:04:16.079 --> 00:04:17.990 align:start position:0%
+detail about it why uh chat template and
+what<00:04:16.239><c> is</c><00:04:16.400><c> exactly</c><00:04:16.799><c> happening.</c><00:04:17.440><c> Uh</c><00:04:17.680><c> there's</c><00:04:17.840><c> a</c>
+
+00:04:17.990 --> 00:04:18.000 align:start position:0%
+what is exactly happening. Uh there's a
+ 
+
+00:04:18.000 --> 00:04:19.509 align:start position:0%
+what is exactly happening. Uh there's a
+tokenization<00:04:18.560><c> step</c><00:04:18.799><c> that</c><00:04:18.959><c> comes</c><00:04:19.199><c> after</c><00:04:19.359><c> and</c>
+
+00:04:19.509 --> 00:04:19.519 align:start position:0%
+tokenization step that comes after and
+ 
+
+00:04:19.519 --> 00:04:21.349 align:start position:0%
+tokenization step that comes after and
+then<00:04:19.600><c> the</c><00:04:19.759><c> assistant</c><00:04:20.160><c> only</c><00:04:20.400><c> masking.</c><00:04:21.120><c> We</c>
+
+00:04:21.349 --> 00:04:21.359 align:start position:0%
+then the assistant only masking. We
+ 
+
+00:04:21.359 --> 00:04:23.590 align:start position:0%
+then the assistant only masking. We
+covered<00:04:21.600><c> these</c><00:04:22.000><c> concepts</c><00:04:22.479><c> in</c><00:04:22.720><c> week</c><00:04:23.040><c> two.</c><00:04:23.360><c> Uh</c>
+
+00:04:23.590 --> 00:04:23.600 align:start position:0%
+covered these concepts in week two. Uh
+ 
+
+00:04:23.600 --> 00:04:25.030 align:start position:0%
+covered these concepts in week two. Uh
+but<00:04:23.840><c> it's</c><00:04:24.080><c> still</c><00:04:24.320><c> I'm</c><00:04:24.479><c> telling</c><00:04:24.639><c> you</c><00:04:24.880><c> might</c>
+
+00:04:25.030 --> 00:04:25.040 align:start position:0%
+but it's still I'm telling you might
+ 
+
+00:04:25.040 --> 00:04:26.310 align:start position:0%
+but it's still I'm telling you might
+have<00:04:25.199><c> thought</c><00:04:25.360><c> you</c><00:04:25.520><c> understood</c><00:04:25.759><c> it</c><00:04:26.000><c> if</c><00:04:26.160><c> that</c>
+
+00:04:26.310 --> 00:04:26.320 align:start position:0%
+have thought you understood it if that
+ 
+
+00:04:26.320 --> 00:04:27.830 align:start position:0%
+have thought you understood it if that
+was<00:04:26.400><c> the</c><00:04:26.560><c> first</c><00:04:26.720><c> time</c><00:04:26.800><c> you</c><00:04:27.040><c> went</c><00:04:27.199><c> through</c><00:04:27.280><c> it.</c>
+
+00:04:27.830 --> 00:04:27.840 align:start position:0%
+was the first time you went through it.
+ 
+
+00:04:27.840 --> 00:04:30.550 align:start position:0%
+was the first time you went through it.
+Uh<00:04:28.160><c> this</c><00:04:28.320><c> is</c><00:04:28.560><c> where</c><00:04:28.800><c> things</c><00:04:29.120><c> go</c><00:04:29.360><c> wrong</c><00:04:30.000><c> and</c>
+
+00:04:30.550 --> 00:04:30.560 align:start position:0%
+Uh this is where things go wrong and
+ 
+
+00:04:30.560 --> 00:04:32.230 align:start position:0%
+Uh this is where things go wrong and
+they've<00:04:30.880><c> gone</c><00:04:31.040><c> wrong</c><00:04:31.199><c> for</c><00:04:31.360><c> us</c><00:04:31.600><c> many</c><00:04:31.840><c> times</c><00:04:32.080><c> and</c>
+
+00:04:32.230 --> 00:04:32.240 align:start position:0%
+they've gone wrong for us many times and
+ 
+
+00:04:32.240 --> 00:04:34.150 align:start position:0%
+they've gone wrong for us many times and
+we've<00:04:32.400><c> had</c><00:04:32.560><c> to</c><00:04:32.639><c> like</c><00:04:32.880><c> figure</c><00:04:33.040><c> out</c><00:04:33.199><c> what</c><00:04:33.360><c> went</c>
+
+00:04:34.150 --> 00:04:34.160 align:start position:0%
+we've had to like figure out what went
+ 
+
+00:04:34.160 --> 00:04:36.710 align:start position:0%
+we've had to like figure out what went
+where<00:04:34.400><c> did</c><00:04:34.479><c> we</c><00:04:34.639><c> miss</c><00:04:34.960><c> mess</c><00:04:35.280><c> up.</c><00:04:35.919><c> Okay.</c><00:04:36.479><c> So</c>
+
+00:04:36.710 --> 00:04:36.720 align:start position:0%
+where did we miss mess up. Okay. So
+ 
+
+00:04:36.720 --> 00:04:38.870 align:start position:0%
+where did we miss mess up. Okay. So
+that's<00:04:37.120><c> uh</c><00:04:37.199><c> the</c><00:04:37.360><c> pre-processing</c><00:04:38.000><c> step.</c><00:04:38.400><c> U</c>
+
+00:04:38.870 --> 00:04:38.880 align:start position:0%
+that's uh the pre-processing step. U
+ 
+
+00:04:38.880 --> 00:04:40.230 align:start position:0%
+that's uh the pre-processing step. U
+there<00:04:39.040><c> will</c><00:04:39.199><c> be</c><00:04:39.280><c> a</c><00:04:39.440><c> lot</c><00:04:39.520><c> of</c><00:04:39.600><c> code</c><00:04:39.840><c> related</c><00:04:40.080><c> to</c>
+
+00:04:40.230 --> 00:04:40.240 align:start position:0%
+there will be a lot of code related to
+ 
+
+00:04:40.240 --> 00:04:42.310 align:start position:0%
+there will be a lot of code related to
+that<00:04:40.320><c> in</c><00:04:40.560><c> the</c><00:04:40.639><c> code</c><00:04:40.880><c> repository.</c><00:04:41.759><c> Uh</c><00:04:41.919><c> next</c><00:04:42.160><c> we</c>
+
+00:04:42.310 --> 00:04:42.320 align:start position:0%
+that in the code repository. Uh next we
+ 
+
+00:04:42.320 --> 00:04:43.909 align:start position:0%
+that in the code repository. Uh next we
+have<00:04:42.400><c> the</c><00:04:42.560><c> model</c><00:04:42.800><c> setup.</c><00:04:43.199><c> Uh</c><00:04:43.440><c> the</c><00:04:43.600><c> key</c><00:04:43.759><c> part</c>
+
+00:04:43.909 --> 00:04:43.919 align:start position:0%
+have the model setup. Uh the key part
+ 
+
+00:04:43.919 --> 00:04:45.430 align:start position:0%
+have the model setup. Uh the key part
+there<00:04:44.080><c> to</c><00:04:44.320><c> remember</c><00:04:44.639><c> is</c><00:04:44.960><c> that</c><00:04:45.199><c> you're</c><00:04:45.360><c> going</c>
+
+00:04:45.430 --> 00:04:45.440 align:start position:0%
+there to remember is that you're going
+ 
+
+00:04:45.440 --> 00:04:47.909 align:start position:0%
+there to remember is that you're going
+to<00:04:45.520><c> load</c><00:04:45.759><c> a</c><00:04:45.919><c> base</c><00:04:46.160><c> model.</c><00:04:46.960><c> uh</c><00:04:47.120><c> in</c><00:04:47.440><c> quantized</c>
+
+00:04:47.909 --> 00:04:47.919 align:start position:0%
+to load a base model. uh in quantized
+ 
+
+00:04:47.919 --> 00:04:49.510 align:start position:0%
+to load a base model. uh in quantized
+form<00:04:48.479><c> and</c><00:04:48.720><c> then</c><00:04:48.880><c> you're</c><00:04:49.040><c> going</c><00:04:49.120><c> to</c><00:04:49.199><c> take</c><00:04:49.360><c> the</c>
+
+00:04:49.510 --> 00:04:49.520 align:start position:0%
+form and then you're going to take the
+ 
+
+00:04:49.520 --> 00:04:51.670 align:start position:0%
+form and then you're going to take the
+Lora<00:04:50.000><c> adapters</c><00:04:50.560><c> and</c><00:04:50.720><c> those</c><00:04:50.960><c> Lora</c><00:04:51.280><c> adapters</c>
+
+00:04:51.670 --> 00:04:51.680 align:start position:0%
+Lora adapters and those Lora adapters
+ 
+
+00:04:51.680 --> 00:04:53.590 align:start position:0%
+Lora adapters and those Lora adapters
+are<00:04:51.840><c> going</c><00:04:51.919><c> to</c><00:04:52.000><c> be</c><00:04:52.160><c> full</c><00:04:52.400><c> precision</c><00:04:53.199><c> and</c><00:04:53.440><c> then</c>
+
+00:04:53.590 --> 00:04:53.600 align:start position:0%
+are going to be full precision and then
+ 
+
+00:04:53.600 --> 00:04:55.270 align:start position:0%
+are going to be full precision and then
+you<00:04:53.759><c> put</c><00:04:53.919><c> together</c><00:04:54.080><c> the</c><00:04:54.240><c> PEFT</c><00:04:54.560><c> model</c><00:04:54.880><c> right</c><00:04:55.120><c> so</c>
+
+00:04:55.270 --> 00:04:55.280 align:start position:0%
+you put together the PEFT model right so
+ 
+
+00:04:55.280 --> 00:04:56.710 align:start position:0%
+you put together the PEFT model right so
+that's<00:04:55.520><c> that's</c><00:04:56.000><c> uh</c><00:04:56.080><c> you're</c><00:04:56.240><c> only</c><00:04:56.479><c> training</c>
+
+00:04:56.710 --> 00:04:56.720 align:start position:0%
+that's that's uh you're only training
+ 
+
+00:04:56.720 --> 00:04:59.510 align:start position:0%
+that's that's uh you're only training
+the<00:04:56.880><c> Lora</c><00:04:57.520><c> layers</c><00:04:57.759><c> within</c><00:04:58.080><c> the</c><00:04:58.639><c> u</c><00:04:59.120><c> within</c><00:04:59.360><c> the</c>
+
+00:04:59.510 --> 00:04:59.520 align:start position:0%
+the Lora layers within the u within the
+ 
+
+00:04:59.520 --> 00:05:01.990 align:start position:0%
+the Lora layers within the u within the
+network<00:05:00.400><c> uh</c><00:05:00.560><c> the</c><00:05:00.720><c> training</c><00:05:01.040><c> part</c><00:05:01.600><c> uh</c><00:05:01.759><c> there's</c>
+
+00:05:01.990 --> 00:05:02.000 align:start position:0%
+network uh the training part uh there's
+ 
+
+00:05:02.000 --> 00:05:03.430 align:start position:0%
+network uh the training part uh there's
+a<00:05:02.240><c> lot</c><00:05:02.320><c> of</c><00:05:02.400><c> training</c><00:05:02.720><c> arguments</c><00:05:03.120><c> that</c><00:05:03.280><c> you</c>
+
+00:05:03.430 --> 00:05:03.440 align:start position:0%
+a lot of training arguments that you
+ 
+
+00:05:03.440 --> 00:05:05.749 align:start position:0%
+a lot of training arguments that you
+have<00:05:03.520><c> to</c><00:05:03.680><c> know</c><00:05:03.840><c> about</c><00:05:04.560><c> um</c><00:05:05.199><c> this</c><00:05:05.360><c> is</c><00:05:05.520><c> like</c>
+
+00:05:05.749 --> 00:05:05.759 align:start position:0%
+have to know about um this is like
+ 
+
+00:05:05.759 --> 00:05:07.270 align:start position:0%
+have to know about um this is like
+classical<00:05:06.160><c> neural</c><00:05:06.479><c> network</c><00:05:06.800><c> training</c><00:05:07.120><c> you</c>
+
+00:05:07.270 --> 00:05:07.280 align:start position:0%
+classical neural network training you
+ 
+
+00:05:07.280 --> 00:05:08.629 align:start position:0%
+classical neural network training you
+have<00:05:07.360><c> to</c><00:05:07.440><c> know</c><00:05:07.600><c> a</c><00:05:07.840><c> few</c><00:05:08.000><c> things</c><00:05:08.160><c> about</c><00:05:08.400><c> what</c>
+
+00:05:08.629 --> 00:05:08.639 align:start position:0%
+have to know a few things about what
+ 
+
+00:05:08.639 --> 00:05:10.390 align:start position:0%
+have to know a few things about what
+you're<00:05:08.800><c> planning</c><00:05:09.039><c> to</c><00:05:09.199><c> do</c><00:05:09.360><c> there</c><00:05:09.840><c> and</c><00:05:10.080><c> then</c><00:05:10.240><c> of</c>
+
+00:05:10.390 --> 00:05:10.400 align:start position:0%
+you're planning to do there and then of
+ 
+
+00:05:10.400 --> 00:05:11.670 align:start position:0%
+you're planning to do there and then of
+course<00:05:10.639><c> because</c><00:05:10.800><c> you're</c><00:05:11.039><c> working</c><00:05:11.199><c> with</c><00:05:11.440><c> large</c>
+
+00:05:11.670 --> 00:05:11.680 align:start position:0%
+course because you're working with large
+ 
+
+00:05:11.680 --> 00:05:13.189 align:start position:0%
+course because you're working with large
+language<00:05:12.000><c> models</c><00:05:12.479><c> you</c><00:05:12.639><c> have</c><00:05:12.720><c> to</c><00:05:12.880><c> worry</c><00:05:13.039><c> about</c>
+
+00:05:13.189 --> 00:05:13.199 align:start position:0%
+language models you have to worry about
+ 
+
+00:05:13.199 --> 00:05:14.710 align:start position:0%
+language models you have to worry about
+memory<00:05:13.600><c> so</c><00:05:13.759><c> there's</c><00:05:14.000><c> some</c><00:05:14.160><c> tricks</c><00:05:14.400><c> you</c><00:05:14.560><c> have</c>
+
+00:05:14.710 --> 00:05:14.720 align:start position:0%
+memory so there's some tricks you have
+ 
+
+00:05:14.720 --> 00:05:16.550 align:start position:0%
+memory so there's some tricks you have
+to<00:05:14.800><c> do</c><00:05:14.960><c> about</c><00:05:15.120><c> batching</c><00:05:15.520><c> the</c><00:05:15.759><c> data</c>
+
+00:05:16.550 --> 00:05:16.560 align:start position:0%
+to do about batching the data
+ 
+
+00:05:16.560 --> 00:05:18.710 align:start position:0%
+to do about batching the data
+uh<00:05:17.280><c> gradient</c><00:05:17.600><c> accumulation</c><00:05:18.160><c> and</c><00:05:18.320><c> those</c><00:05:18.560><c> kinds</c>
+
+00:05:18.710 --> 00:05:18.720 align:start position:0%
+uh gradient accumulation and those kinds
+ 
+
+00:05:18.720 --> 00:05:19.909 align:start position:0%
+uh gradient accumulation and those kinds
+of<00:05:18.800><c> things</c><00:05:18.960><c> you'll</c><00:05:19.280><c> need</c><00:05:19.360><c> to</c><00:05:19.520><c> worry</c><00:05:19.680><c> about.</c>
+
+00:05:19.909 --> 00:05:19.919 align:start position:0%
+of things you'll need to worry about.
+ 
+
+00:05:19.919 --> 00:05:21.510 align:start position:0%
+of things you'll need to worry about.
+That's<00:05:20.240><c> again</c><00:05:20.479><c> we'll</c><00:05:20.639><c> cover</c><00:05:20.800><c> that</c><00:05:21.039><c> in</c><00:05:21.199><c> video</c>
+
+00:05:21.510 --> 00:05:21.520 align:start position:0%
+That's again we'll cover that in video
+ 
+
+00:05:21.520 --> 00:05:23.350 align:start position:0%
+That's again we'll cover that in video
+three<00:05:21.840><c> after</c><00:05:22.080><c> this.</c><00:05:22.560><c> So</c><00:05:22.720><c> this</c><00:05:22.880><c> is</c><00:05:22.960><c> the</c><00:05:23.199><c> first</c>
+
+00:05:23.350 --> 00:05:23.360 align:start position:0%
+three after this. So this is the first
+ 
+
+00:05:23.360 --> 00:05:25.189 align:start position:0%
+three after this. So this is the first
+one<00:05:23.600><c> which</c><00:05:23.840><c> is</c><00:05:24.080><c> overview.</c><00:05:24.639><c> Next</c><00:05:24.800><c> we'll</c><00:05:25.120><c> go</c>
+
+00:05:25.189 --> 00:05:25.199 align:start position:0%
+one which is overview. Next we'll go
+ 
+
+00:05:25.199 --> 00:05:27.110 align:start position:0%
+one which is overview. Next we'll go
+through<00:05:25.440><c> pre-processing.</c><00:05:26.400><c> The</c><00:05:26.639><c> third</c><00:05:26.800><c> video</c>
+
+00:05:27.110 --> 00:05:27.120 align:start position:0%
+through pre-processing. The third video
+ 
+
+00:05:27.120 --> 00:05:29.189 align:start position:0%
+through pre-processing. The third video
+we'll<00:05:27.360><c> talk</c><00:05:27.520><c> about</c><00:05:27.680><c> the</c><00:05:28.160><c> uh</c><00:05:28.400><c> the</c><00:05:28.720><c> highle</c>
+
+00:05:29.189 --> 00:05:29.199 align:start position:0%
+we'll talk about the uh the highle
+ 
+
+00:05:29.199 --> 00:05:31.590 align:start position:0%
+we'll talk about the uh the highle
+overview<00:05:29.520><c> of</c><00:05:29.840><c> training.</c><00:05:30.639><c> So</c><00:05:30.800><c> that</c><00:05:31.199><c> we</c><00:05:31.360><c> will</c>
+
+00:05:31.590 --> 00:05:31.600 align:start position:0%
+overview of training. So that we will
+ 
+
+00:05:31.600 --> 00:05:33.670 align:start position:0%
+overview of training. So that we will
+talk<00:05:31.680><c> about</c><00:05:31.840><c> the</c><00:05:32.000><c> trainer</c><00:05:32.400><c> in</c><00:05:32.560><c> that</c><00:05:32.800><c> video.</c><00:05:33.440><c> Uh</c>
+
+00:05:33.670 --> 00:05:33.680 align:start position:0%
+talk about the trainer in that video. Uh
+ 
+
+00:05:33.680 --> 00:05:35.430 align:start position:0%
+talk about the trainer in that video. Uh
+and<00:05:33.840><c> then</c><00:05:34.000><c> once</c><00:05:34.160><c> you</c><00:05:34.320><c> run</c><00:05:34.479><c> the</c><00:05:34.639><c> training</c><00:05:35.199><c> at</c>
+
+00:05:35.430 --> 00:05:35.440 align:start position:0%
+and then once you run the training at
+ 
+
+00:05:35.440 --> 00:05:36.950 align:start position:0%
+and then once you run the training at
+the<00:05:35.520><c> end</c><00:05:35.600><c> of</c><00:05:35.759><c> it</c><00:05:35.919><c> you</c><00:05:36.160><c> will</c><00:05:36.320><c> have</c><00:05:36.400><c> the</c><00:05:36.560><c> saved</c>
+
+00:05:36.950 --> 00:05:36.960 align:start position:0%
+the end of it you will have the saved
+ 
+
+00:05:36.960 --> 00:05:38.469 align:start position:0%
+the end of it you will have the saved
+adapters<00:05:37.440><c> which</c><00:05:37.759><c> uh</c><00:05:37.840><c> we</c><00:05:38.000><c> only</c><00:05:38.160><c> save</c><00:05:38.400><c> the</c>
+
+00:05:38.469 --> 00:05:38.479 align:start position:0%
+adapters which uh we only save the
+ 
+
+00:05:38.479 --> 00:05:39.749 align:start position:0%
+adapters which uh we only save the
+adapters.<00:05:38.960><c> You</c><00:05:39.120><c> don't</c><00:05:39.199><c> need</c><00:05:39.280><c> to</c><00:05:39.360><c> save</c><00:05:39.600><c> the</c>
+
+00:05:39.749 --> 00:05:39.759 align:start position:0%
+adapters. You don't need to save the
+ 
+
+00:05:39.759 --> 00:05:42.710 align:start position:0%
+adapters. You don't need to save the
+base<00:05:40.000><c> model.</c><00:05:40.400><c> Right?</c><00:05:40.960><c> So</c><00:05:41.919><c> as</c><00:05:42.160><c> you</c><00:05:42.400><c> go</c><00:05:42.560><c> through</c>
+
+00:05:42.710 --> 00:05:42.720 align:start position:0%
+base model. Right? So as you go through
+ 
+
+00:05:42.720 --> 00:05:44.390 align:start position:0%
+base model. Right? So as you go through
+the<00:05:42.960><c> pipeline</c><00:05:43.360><c> and</c><00:05:43.600><c> as</c><00:05:43.759><c> you</c><00:05:43.919><c> go</c><00:05:44.080><c> through</c><00:05:44.240><c> the</c>
+
+00:05:44.390 --> 00:05:44.400 align:start position:0%
+the pipeline and as you go through the
+ 
+
+00:05:44.400 --> 00:05:47.029 align:start position:0%
+the pipeline and as you go through the
+code<00:05:44.880><c> in</c><00:05:45.120><c> the</c><00:05:45.280><c> repository,</c><00:05:46.320><c> always</c><00:05:46.560><c> be</c><00:05:46.800><c> aware</c>
+
+00:05:47.029 --> 00:05:47.039 align:start position:0%
+code in the repository, always be aware
+ 
+
+00:05:47.039 --> 00:05:50.070 align:start position:0%
+code in the repository, always be aware
+that<00:05:47.840><c> you're</c><00:05:48.160><c> in</c><00:05:48.639><c> uh</c><00:05:48.800><c> in</c><00:05:49.199><c> one</c><00:05:49.440><c> of</c><00:05:49.600><c> these</c><00:05:49.840><c> steps</c>
+
+00:05:50.070 --> 00:05:50.080 align:start position:0%
+that you're in uh in one of these steps
+ 
+
+00:05:50.080 --> 00:05:51.670 align:start position:0%
+that you're in uh in one of these steps
+and<00:05:50.320><c> you're</c><00:05:50.560><c> doing</c><00:05:50.720><c> one</c><00:05:50.880><c> of</c><00:05:51.039><c> these</c><00:05:51.440><c> these</c>
+
+00:05:51.670 --> 00:05:51.680 align:start position:0%
+and you're doing one of these these
+ 
+
+00:05:51.680 --> 00:05:53.110 align:start position:0%
+and you're doing one of these these
+things<00:05:51.840><c> that</c><00:05:52.000><c> are</c><00:05:52.160><c> shown</c><00:05:52.320><c> on</c><00:05:52.560><c> this</c><00:05:52.720><c> chart.</c>
+
+00:05:53.110 --> 00:05:53.120 align:start position:0%
+things that are shown on this chart.
+ 
+
+00:05:53.120 --> 00:05:55.350 align:start position:0%
+things that are shown on this chart.
+Okay?<00:05:53.680><c> So</c><00:05:53.919><c> don't</c><00:05:54.160><c> get</c><00:05:54.320><c> lost</c><00:05:54.560><c> in</c><00:05:54.800><c> the</c><00:05:55.039><c> the</c>
+
+00:05:55.350 --> 00:05:55.360 align:start position:0%
+Okay? So don't get lost in the the
+ 
+
+00:05:55.360 --> 00:05:57.189 align:start position:0%
+Okay? So don't get lost in the the
+boiler<00:05:56.080><c> plate</c><00:05:56.400><c> code</c><00:05:56.639><c> that</c><00:05:56.800><c> you're</c><00:05:57.039><c> going</c><00:05:57.120><c> to</c>
+
+00:05:57.189 --> 00:05:57.199 align:start position:0%
+boiler plate code that you're going to
+ 
+
+00:05:57.199 --> 00:05:59.510 align:start position:0%
+boiler plate code that you're going to
+see.<00:05:57.919><c> It</c><00:05:58.160><c> seems</c><00:05:58.320><c> like</c><00:05:58.479><c> alien</c><00:05:58.960><c> you</c><00:05:59.120><c> can</c><00:05:59.199><c> always</c>
+
+00:05:59.510 --> 00:05:59.520 align:start position:0%
+see. It seems like alien you can always
+ 
+
+00:05:59.520 --> 00:06:01.590 align:start position:0%
+see. It seems like alien you can always
+take<00:05:59.759><c> that</c><00:06:00.000><c> code</c><00:06:00.160><c> and</c><00:06:00.400><c> drop</c><00:06:00.560><c> it</c><00:06:00.720><c> into</c><00:06:01.039><c> chat</c><00:06:01.280><c> gd</c>
+
+00:06:01.590 --> 00:06:01.600 align:start position:0%
+take that code and drop it into chat gd
+ 
+
+00:06:01.600 --> 00:06:03.350 align:start position:0%
+take that code and drop it into chat gd
+or<00:06:01.759><c> cloud</c><00:06:02.080><c> window</c><00:06:02.320><c> and</c><00:06:02.479><c> say</c><00:06:02.720><c> explain</c><00:06:03.039><c> to</c><00:06:03.199><c> me</c>
+
+00:06:03.350 --> 00:06:03.360 align:start position:0%
+or cloud window and say explain to me
+ 
+
+00:06:03.360 --> 00:06:05.029 align:start position:0%
+or cloud window and say explain to me
+what's<00:06:03.680><c> happening</c><00:06:04.240><c> and</c><00:06:04.560><c> you</c><00:06:04.720><c> will</c><00:06:04.800><c> get</c><00:06:04.880><c> a</c>
+
+00:06:05.029 --> 00:06:05.039 align:start position:0%
+what's happening and you will get a
+ 
+
+00:06:05.039 --> 00:06:06.870 align:start position:0%
+what's happening and you will get a
+pretty<00:06:05.199><c> good</c><00:06:05.280><c> idea</c><00:06:05.440><c> of</c><00:06:05.600><c> what's</c><00:06:05.840><c> going</c><00:06:05.919><c> on.</c><00:06:06.160><c> So</c>
+
+00:06:06.870 --> 00:06:06.880 align:start position:0%
+pretty good idea of what's going on. So
+ 
+
+00:06:06.880 --> 00:06:08.629 align:start position:0%
+pretty good idea of what's going on. So
+um<00:06:07.039><c> again</c><00:06:07.440><c> I</c><00:06:07.680><c> wanted</c><00:06:07.919><c> you</c><00:06:08.080><c> to</c><00:06:08.160><c> have</c><00:06:08.319><c> that</c><00:06:08.479><c> high</c>
+
+00:06:08.629 --> 00:06:08.639 align:start position:0%
+um again I wanted you to have that high
+ 
+
+00:06:08.639 --> 00:06:10.230 align:start position:0%
+um again I wanted you to have that high
+level<00:06:08.880><c> overview</c><00:06:09.280><c> before</c><00:06:09.520><c> you</c><00:06:09.680><c> dive</c><00:06:09.840><c> into</c><00:06:10.080><c> the</c>
+
+00:06:10.230 --> 00:06:10.240 align:start position:0%
+level overview before you dive into the
+ 
+
+00:06:10.240 --> 00:06:12.230 align:start position:0%
+level overview before you dive into the
+code.<00:06:10.800><c> Okay</c><00:06:11.039><c> let</c><00:06:11.280><c> me</c><00:06:11.440><c> do</c><00:06:11.520><c> the</c><00:06:11.759><c> same</c><00:06:11.919><c> thing</c><00:06:12.000><c> with</c>
+
+00:06:12.230 --> 00:06:12.240 align:start position:0%
+code. Okay let me do the same thing with
+ 
+
+00:06:12.240 --> 00:06:15.029 align:start position:0%
+code. Okay let me do the same thing with
+the<00:06:12.479><c> evaluation</c><00:06:13.039><c> pipeline.</c><00:06:13.759><c> Okay</c><00:06:14.080><c> and</c><00:06:14.639><c> um</c>
+
+00:06:15.029 --> 00:06:15.039 align:start position:0%
+the evaluation pipeline. Okay and um
+ 
+
+00:06:15.039 --> 00:06:17.029 align:start position:0%
+the evaluation pipeline. Okay and um
+after<00:06:15.360><c> that</c><00:06:15.840><c> uh</c><00:06:16.000><c> the</c><00:06:16.160><c> next</c><00:06:16.319><c> video</c><00:06:16.560><c> we</c><00:06:16.720><c> get</c><00:06:16.880><c> into</c>
+
+00:06:17.029 --> 00:06:17.039 align:start position:0%
+after that uh the next video we get into
+ 
+
+00:06:17.039 --> 00:06:19.830 align:start position:0%
+after that uh the next video we get into
+the<00:06:17.199><c> more</c><00:06:17.440><c> more</c><00:06:17.600><c> granular</c><00:06:18.080><c> details.</c><00:06:19.039><c> So</c><00:06:19.600><c> uh</c><00:06:19.680><c> as</c>
+
+00:06:19.830 --> 00:06:19.840 align:start position:0%
+the more more granular details. So uh as
+ 
+
+00:06:19.840 --> 00:06:21.270 align:start position:0%
+the more more granular details. So uh as
+you<00:06:20.000><c> see</c><00:06:20.160><c> at</c><00:06:20.400><c> the</c><00:06:20.479><c> end</c><00:06:20.560><c> of</c><00:06:20.720><c> training</c><00:06:21.039><c> we're</c>
+
+00:06:21.270 --> 00:06:21.280 align:start position:0%
+you see at the end of training we're
+ 
+
+00:06:21.280 --> 00:06:23.510 align:start position:0%
+you see at the end of training we're
+going<00:06:21.360><c> to</c><00:06:21.440><c> have</c><00:06:21.520><c> these</c><00:06:21.759><c> saved</c><00:06:22.080><c> adapters</c><00:06:23.039><c> and</c>
+
+00:06:23.510 --> 00:06:23.520 align:start position:0%
+going to have these saved adapters and
+ 
+
+00:06:23.520 --> 00:06:25.270 align:start position:0%
+going to have these saved adapters and
+really<00:06:23.759><c> that's</c><00:06:24.000><c> the</c><00:06:24.160><c> starting</c><00:06:24.479><c> point</c><00:06:24.720><c> for</c><00:06:25.039><c> the</c>
+
+00:06:25.270 --> 00:06:25.280 align:start position:0%
+really that's the starting point for the
+ 
+
+00:06:25.280 --> 00:06:27.990 align:start position:0%
+really that's the starting point for the
+evaluation<00:06:25.840><c> pipeline</c><00:06:26.400><c> right</c><00:06:26.560><c> we</c><00:06:27.360><c> well</c><00:06:27.759><c> you're</c>
+
+00:06:27.990 --> 00:06:28.000 align:start position:0%
+evaluation pipeline right we well you're
+ 
+
+00:06:28.000 --> 00:06:29.909 align:start position:0%
+evaluation pipeline right we well you're
+first<00:06:28.240><c> going</c><00:06:28.400><c> to</c><00:06:28.479><c> load</c><00:06:28.720><c> the</c><00:06:28.880><c> data</c><00:06:29.120><c> set</c><00:06:29.680><c> that's</c>
+
+00:06:29.909 --> 00:06:29.919 align:start position:0%
+first going to load the data set that's
+ 
+
+00:06:29.919 --> 00:06:31.830 align:start position:0%
+first going to load the data set that's
+the<00:06:30.080><c> first</c><00:06:30.240><c> step</c><00:06:30.479><c> but</c><00:06:31.120><c> you're</c><00:06:31.360><c> really</c><00:06:31.600><c> again</c>
+
+00:06:31.830 --> 00:06:31.840 align:start position:0%
+the first step but you're really again
+ 
+
+00:06:31.840 --> 00:06:33.670 align:start position:0%
+the first step but you're really again
+taking<00:06:32.080><c> the</c><00:06:32.240><c> validation</c><00:06:32.720><c> or</c><00:06:32.880><c> the</c><00:06:33.039><c> test</c><00:06:33.199><c> grid</c>
+
+00:06:33.670 --> 00:06:33.680 align:start position:0%
+taking the validation or the test grid
+ 
+
+00:06:33.680 --> 00:06:34.710 align:start position:0%
+taking the validation or the test grid
+whichever<00:06:34.000><c> one</c><00:06:34.160><c> you're</c><00:06:34.400><c> using</c><00:06:34.560><c> for</c>
+
+00:06:34.710 --> 00:06:34.720 align:start position:0%
+whichever one you're using for
+ 
+
+00:06:34.720 --> 00:06:37.110 align:start position:0%
+whichever one you're using for
+evaluation<00:06:35.919><c> uh</c><00:06:36.080><c> of</c><00:06:36.240><c> course</c><00:06:36.479><c> for</c><00:06:36.639><c> most</c><00:06:36.880><c> of</c><00:06:36.960><c> the</c>
+
+00:06:37.110 --> 00:06:37.120 align:start position:0%
+evaluation uh of course for most of the
+ 
+
+00:06:37.120 --> 00:06:38.550 align:start position:0%
+evaluation uh of course for most of the
+exercise<00:06:37.520><c> here</c><00:06:37.759><c> we</c><00:06:38.080><c> working</c><00:06:38.240><c> with</c><00:06:38.400><c> the</c>
+
+00:06:38.550 --> 00:06:38.560 align:start position:0%
+exercise here we working with the
+ 
+
+00:06:38.560 --> 00:06:40.469 align:start position:0%
+exercise here we working with the
+validation<00:06:38.960><c> set</c><00:06:39.440><c> we'll</c><00:06:39.600><c> use</c><00:06:39.759><c> the</c><00:06:39.919><c> test</c><00:06:40.080><c> set</c><00:06:40.240><c> at</c>
+
+00:06:40.469 --> 00:06:40.479 align:start position:0%
+validation set we'll use the test set at
+ 
+
+00:06:40.479 --> 00:06:43.350 align:start position:0%
+validation set we'll use the test set at
+the<00:06:40.639><c> very</c><00:06:40.880><c> very</c><00:06:41.199><c> end.</c><00:06:41.919><c> So</c><00:06:42.160><c> yeah,</c><00:06:42.400><c> you</c><00:06:42.560><c> have</c><00:06:42.639><c> the</c>
+
+00:06:43.350 --> 00:06:43.360 align:start position:0%
+the very very end. So yeah, you have the
+ 
+
+00:06:43.360 --> 00:06:45.830 align:start position:0%
+the very very end. So yeah, you have the
+validation<00:06:43.919><c> split</c><00:06:44.639><c> and</c><00:06:44.880><c> then</c><00:06:45.280><c> we</c><00:06:45.520><c> will</c><00:06:45.680><c> load</c>
+
+00:06:45.830 --> 00:06:45.840 align:start position:0%
+validation split and then we will load
+ 
+
+00:06:45.840 --> 00:06:47.749 align:start position:0%
+validation split and then we will load
+the<00:06:46.080><c> PET</c><00:06:46.479><c> model</c><00:06:46.639><c> which</c><00:06:46.880><c> is</c><00:06:46.960><c> you</c><00:06:47.199><c> load</c><00:06:47.360><c> the</c><00:06:47.520><c> base</c>
+
+00:06:47.749 --> 00:06:47.759 align:start position:0%
+the PET model which is you load the base
+ 
+
+00:06:47.759 --> 00:06:50.230 align:start position:0%
+the PET model which is you load the base
+model<00:06:48.479><c> um</c><00:06:48.560><c> and</c><00:06:48.800><c> then</c><00:06:49.039><c> you</c><00:06:49.280><c> also</c><00:06:49.520><c> load</c><00:06:49.680><c> the</c><00:06:49.919><c> the</c>
+
+00:06:50.230 --> 00:06:50.240 align:start position:0%
+model um and then you also load the the
+ 
+
+00:06:50.240 --> 00:06:51.830 align:start position:0%
+model um and then you also load the the
+trained<00:06:50.560><c> lura</c><00:06:50.960><c> adapters,</c><00:06:51.440><c> put</c><00:06:51.600><c> them</c>
+
+00:06:51.830 --> 00:06:51.840 align:start position:0%
+trained lura adapters, put them
+ 
+
+00:06:51.840 --> 00:06:53.909 align:start position:0%
+trained lura adapters, put them
+together,<00:06:52.560><c> use</c><00:06:52.800><c> it</c><00:06:52.960><c> to</c><00:06:53.120><c> generate</c><00:06:53.520><c> the</c>
+
+00:06:53.909 --> 00:06:53.919 align:start position:0%
+together, use it to generate the
+ 
+
+00:06:53.919 --> 00:06:55.909 align:start position:0%
+together, use it to generate the
+predictions.<00:06:54.720><c> Uh</c><00:06:55.039><c> by</c><00:06:55.199><c> the</c><00:06:55.280><c> way,</c><00:06:55.360><c> let</c><00:06:55.520><c> me</c><00:06:55.759><c> back</c>
+
+00:06:55.909 --> 00:06:55.919 align:start position:0%
+predictions. Uh by the way, let me back
+ 
+
+00:06:55.919 --> 00:06:58.469 align:start position:0%
+predictions. Uh by the way, let me back
+up<00:06:56.000><c> a</c><00:06:56.240><c> little</c><00:06:56.319><c> bit.</c><00:06:56.560><c> You</c><00:06:56.720><c> could</c><00:06:56.960><c> have</c><00:06:57.280><c> saved</c><00:06:58.400><c> uh</c>
+
+00:06:58.469 --> 00:06:58.479 align:start position:0%
+up a little bit. You could have saved uh
+ 
+
+00:06:58.479 --> 00:07:00.150 align:start position:0%
+up a little bit. You could have saved uh
+the<00:06:59.039><c> uh</c><00:06:59.120><c> you</c><00:06:59.360><c> could</c><00:06:59.440><c> have</c><00:06:59.599><c> merged</c><00:06:59.840><c> the</c><00:07:00.000><c> two</c>
+
+00:07:00.150 --> 00:07:00.160 align:start position:0%
+the uh you could have merged the two
+ 
+
+00:07:00.160 --> 00:07:01.990 align:start position:0%
+the uh you could have merged the two
+models<00:07:00.400><c> and</c><00:07:00.639><c> saved</c><00:07:00.960><c> them</c><00:07:01.120><c> together,</c><00:07:01.520><c> but</c><00:07:01.759><c> it</c>
+
+00:07:01.990 --> 00:07:02.000 align:start position:0%
+models and saved them together, but it
+ 
+
+00:07:02.000 --> 00:07:03.430 align:start position:0%
+models and saved them together, but it
+doesn't<00:07:02.160><c> really</c><00:07:02.560><c> make</c><00:07:02.800><c> sense</c><00:07:02.960><c> to</c><00:07:03.199><c> do</c><00:07:03.280><c> that</c>
+
+00:07:03.430 --> 00:07:03.440 align:start position:0%
+doesn't really make sense to do that
+ 
+
+00:07:03.440 --> 00:07:04.550 align:start position:0%
+doesn't really make sense to do that
+because<00:07:03.680><c> you're</c><00:07:03.919><c> just</c><00:07:04.080><c> going</c><00:07:04.160><c> to</c><00:07:04.240><c> save</c><00:07:04.400><c> a</c>
+
+00:07:04.550 --> 00:07:04.560 align:start position:0%
+because you're just going to save a
+ 
+
+00:07:04.560 --> 00:07:07.110 align:start position:0%
+because you're just going to save a
+large<00:07:04.800><c> model.</c><00:07:05.520><c> And</c><00:07:05.680><c> so</c><00:07:05.919><c> the</c><00:07:06.080><c> the</c><00:07:06.160><c> the</c><00:07:06.880><c> pattern</c>
+
+00:07:07.110 --> 00:07:07.120 align:start position:0%
+large model. And so the the the pattern
+ 
+
+00:07:07.120 --> 00:07:08.950 align:start position:0%
+large model. And so the the the pattern
+is<00:07:07.360><c> usually</c><00:07:07.680><c> just</c><00:07:07.840><c> save</c><00:07:08.000><c> the</c><00:07:08.080><c> lura</c><00:07:08.400><c> adapters.</c>
+
+00:07:08.950 --> 00:07:08.960 align:start position:0%
+is usually just save the lura adapters.
+ 
+
+00:07:08.960 --> 00:07:10.950 align:start position:0%
+is usually just save the lura adapters.
+Okay.<00:07:09.360><c> So</c><00:07:09.759><c> just</c><00:07:10.160><c> uh</c><00:07:10.319><c> in</c><00:07:10.479><c> case</c><00:07:10.720><c> you</c><00:07:10.800><c> want</c><00:07:10.880><c> to</c>
+
+00:07:10.950 --> 00:07:10.960 align:start position:0%
+Okay. So just uh in case you want to
+ 
+
+00:07:10.960 --> 00:07:12.230 align:start position:0%
+Okay. So just uh in case you want to
+just<00:07:11.120><c> know</c><00:07:11.280><c> why</c><00:07:11.440><c> why</c><00:07:11.599><c> don't</c><00:07:11.759><c> we</c><00:07:11.840><c> just</c><00:07:12.000><c> merge</c>
+
+00:07:12.230 --> 00:07:12.240 align:start position:0%
+just know why why don't we just merge
+ 
+
+00:07:12.240 --> 00:07:13.670 align:start position:0%
+just know why why don't we just merge
+them<00:07:12.400><c> together</c><00:07:12.639><c> the</c><00:07:12.880><c> base</c><00:07:13.039><c> and</c><00:07:13.199><c> the</c><00:07:13.360><c> the</c><00:07:13.520><c> lower</c>
+
+00:07:13.670 --> 00:07:13.680 align:start position:0%
+them together the base and the the lower
+ 
+
+00:07:13.680 --> 00:07:16.309 align:start position:0%
+them together the base and the the lower
+adaptors<00:07:14.160><c> you</c><00:07:14.319><c> can</c><00:07:14.479><c> do</c><00:07:14.639><c> that.</c><00:07:15.280><c> Uh</c><00:07:15.520><c> but</c><00:07:15.919><c> uh</c><00:07:16.080><c> no</c>
+
+00:07:16.309 --> 00:07:16.319 align:start position:0%
+adaptors you can do that. Uh but uh no
+ 
+
+00:07:16.319 --> 00:07:19.029 align:start position:0%
+adaptors you can do that. Uh but uh no
+really<00:07:16.639><c> no</c><00:07:17.039><c> no</c><00:07:17.280><c> need</c><00:07:17.360><c> to</c><00:07:17.520><c> do</c><00:07:17.599><c> that.</c><00:07:18.160><c> Okay.</c><00:07:18.560><c> So</c>
+
+00:07:19.029 --> 00:07:19.039 align:start position:0%
+really no no need to do that. Okay. So
+ 
+
+00:07:19.039 --> 00:07:21.270 align:start position:0%
+really no no need to do that. Okay. So
+that<00:07:19.280><c> is</c><00:07:19.440><c> the</c><00:07:19.680><c> highle</c><00:07:20.080><c> overview.</c><00:07:20.800><c> Uh</c><00:07:20.960><c> I</c>
+
+00:07:21.270 --> 00:07:21.280 align:start position:0%
+that is the highle overview. Uh I
+ 
+
+00:07:21.280 --> 00:07:22.790 align:start position:0%
+that is the highle overview. Uh I
+mentioned<00:07:21.680><c> make</c><00:07:21.840><c> sure</c><00:07:22.000><c> you</c><00:07:22.240><c> are</c><00:07:22.479><c> never</c>
+
+00:07:22.790 --> 00:07:22.800 align:start position:0%
+mentioned make sure you are never
+ 
+
+00:07:22.800 --> 00:07:24.710 align:start position:0%
+mentioned make sure you are never
+getting<00:07:23.039><c> lost</c><00:07:23.360><c> in</c><00:07:23.520><c> the</c><00:07:23.680><c> steps.</c><00:07:24.000><c> You're</c><00:07:24.319><c> always</c>
+
+00:07:24.710 --> 00:07:24.720 align:start position:0%
+getting lost in the steps. You're always
+ 
+
+00:07:24.720 --> 00:07:26.550 align:start position:0%
+getting lost in the steps. You're always
+aware<00:07:25.120><c> of</c><00:07:25.360><c> where</c><00:07:25.599><c> you</c><00:07:25.759><c> are</c><00:07:25.919><c> in</c><00:07:26.080><c> that</c><00:07:26.240><c> journey</c>
+
+00:07:26.550 --> 00:07:26.560 align:start position:0%
+aware of where you are in that journey
+ 
+
+00:07:26.560 --> 00:07:28.309 align:start position:0%
+aware of where you are in that journey
+right<00:07:26.720><c> whether</c><00:07:26.960><c> you're</c><00:07:27.199><c> looking</c><00:07:27.360><c> at</c><00:07:27.599><c> the</c><00:07:28.240><c> uh</c>
+
+00:07:28.309 --> 00:07:28.319 align:start position:0%
+right whether you're looking at the uh
+ 
+
+00:07:28.319 --> 00:07:30.150 align:start position:0%
+right whether you're looking at the uh
+the<00:07:28.560><c> evaluation</c><00:07:29.280><c> workflow</c><00:07:29.680><c> which</c><00:07:29.919><c> you're</c>
+
+00:07:30.150 --> 00:07:30.160 align:start position:0%
+the evaluation workflow which you're
+ 
+
+00:07:30.160 --> 00:07:31.909 align:start position:0%
+the evaluation workflow which you're
+seeing<00:07:30.319><c> here</c><00:07:30.560><c> or</c><00:07:30.800><c> the</c><00:07:30.960><c> training</c><00:07:31.280><c> workflow</c><00:07:31.840><c> uh</c>
+
+00:07:31.909 --> 00:07:31.919 align:start position:0%
+seeing here or the training workflow uh
+ 
+
+00:07:31.919 --> 00:07:34.309 align:start position:0%
+seeing here or the training workflow uh
+the<00:07:32.080><c> cula</c><00:07:32.800><c> training</c><00:07:33.039><c> workflow</c><00:07:33.840><c> and</c><00:07:34.000><c> you'll</c>
+
+00:07:34.309 --> 00:07:34.319 align:start position:0%
+the cula training workflow and you'll
+ 
+
+00:07:34.319 --> 00:07:35.749 align:start position:0%
+the cula training workflow and you'll
+always<00:07:34.560><c> be</c><00:07:34.639><c> looking</c><00:07:34.800><c> at</c><00:07:34.960><c> a</c><00:07:35.199><c> particular</c><00:07:35.520><c> step</c>
+
+00:07:35.749 --> 00:07:35.759 align:start position:0%
+always be looking at a particular step
+ 
+
+00:07:35.759 --> 00:07:38.390 align:start position:0%
+always be looking at a particular step
+in<00:07:35.919><c> it.</c><00:07:36.479><c> So</c><00:07:36.880><c> also</c><00:07:37.199><c> be</c><00:07:37.440><c> aware</c><00:07:37.840><c> why</c><00:07:38.080><c> you</c><00:07:38.240><c> are</c>
+
+00:07:38.390 --> 00:07:38.400 align:start position:0%
+in it. So also be aware why you are
+ 
+
+00:07:38.400 --> 00:07:40.950 align:start position:0%
+in it. So also be aware why you are
+doing<00:07:38.560><c> certain</c><00:07:38.880><c> things</c><00:07:39.199><c> why</c><00:07:39.440><c> we</c><00:07:39.599><c> do</c><00:07:40.400><c> uh</c><00:07:40.560><c> why</c><00:07:40.800><c> we</c>
+
+00:07:40.950 --> 00:07:40.960 align:start position:0%
+doing certain things why we do uh why we
+ 
+
+00:07:40.960 --> 00:07:42.469 align:start position:0%
+doing certain things why we do uh why we
+apply<00:07:41.120><c> the</c><00:07:41.280><c> chat</c><00:07:41.520><c> template</c><00:07:41.840><c> why</c><00:07:42.000><c> do</c><00:07:42.080><c> the</c><00:07:42.319><c> why</c>
+
+00:07:42.469 --> 00:07:42.479 align:start position:0%
+apply the chat template why do the why
+ 
+
+00:07:42.479 --> 00:07:44.150 align:start position:0%
+apply the chat template why do the why
+we<00:07:42.560><c> do</c><00:07:42.639><c> the</c><00:07:42.800><c> c</c><00:07:43.039><c> the</c><00:07:43.199><c> tokenization</c><00:07:43.759><c> a</c><00:07:44.000><c> certain</c>
+
+00:07:44.150 --> 00:07:44.160 align:start position:0%
+we do the c the tokenization a certain
+ 
+
+00:07:44.160 --> 00:07:46.230 align:start position:0%
+we do the c the tokenization a certain
+way<00:07:44.319><c> and</c><00:07:44.560><c> the</c><00:07:44.800><c> assistant</c><00:07:45.199><c> masking</c><00:07:45.680><c> applied</c><00:07:46.080><c> a</c>
+
+00:07:46.230 --> 00:07:46.240 align:start position:0%
+way and the assistant masking applied a
+ 
+
+00:07:46.240 --> 00:07:48.710 align:start position:0%
+way and the assistant masking applied a
+certain<00:07:46.479><c> way</c><00:07:47.039><c> uh</c><00:07:47.199><c> just</c><00:07:47.680><c> be</c><00:07:47.840><c> aware</c><00:07:48.080><c> of</c><00:07:48.240><c> it</c><00:07:48.479><c> and</c>
+
+00:07:48.710 --> 00:07:48.720 align:start position:0%
+certain way uh just be aware of it and
+ 
+
+00:07:48.720 --> 00:07:50.870 align:start position:0%
+certain way uh just be aware of it and
+if<00:07:48.880><c> you</c><00:07:49.039><c> do</c><00:07:49.199><c> know</c><00:07:49.360><c> that</c><00:07:49.759><c> then</c><00:07:50.319><c> maybe</c><00:07:50.560><c> you'll</c>
+
+00:07:50.870 --> 00:07:50.880 align:start position:0%
+if you do know that then maybe you'll
+ 
+
+00:07:50.880 --> 00:07:52.390 align:start position:0%
+if you do know that then maybe you'll
+write<00:07:51.120><c> your</c><00:07:51.280><c> own</c><00:07:51.440><c> code</c><00:07:51.840><c> uh</c><00:07:51.919><c> you</c><00:07:52.080><c> don't</c><00:07:52.240><c> have</c><00:07:52.319><c> to</c>
+
+00:07:52.390 --> 00:07:52.400 align:start position:0%
+write your own code uh you don't have to
+ 
+
+00:07:52.400 --> 00:07:54.070 align:start position:0%
+write your own code uh you don't have to
+use<00:07:52.560><c> our</c><00:07:52.800><c> code</c><00:07:53.039><c> here</c><00:07:53.199><c> in</c><00:07:53.360><c> the</c><00:07:53.440><c> repository</c><00:07:53.919><c> you</c>
+
+00:07:54.070 --> 00:07:54.080 align:start position:0%
+use our code here in the repository you
+ 
+
+00:07:54.080 --> 00:07:55.270 align:start position:0%
+use our code here in the repository you
+can<00:07:54.160><c> do</c><00:07:54.240><c> your</c><00:07:54.400><c> own</c><00:07:54.479><c> thing</c><00:07:54.639><c> or</c><00:07:54.879><c> at</c><00:07:54.879><c> least</c><00:07:55.199><c> play</c>
+
+00:07:55.270 --> 00:07:55.280 align:start position:0%
+can do your own thing or at least play
+ 
+
+00:07:55.280 --> 00:07:57.510 align:start position:0%
+can do your own thing or at least play
+around<00:07:55.520><c> with</c><00:07:55.680><c> it</c><00:07:56.160><c> okay</c><00:07:56.639><c> all</c><00:07:56.720><c> right</c><00:07:56.960><c> I</c><00:07:57.199><c> hope</c><00:07:57.360><c> you</c>
+
+00:07:57.510 --> 00:07:57.520 align:start position:0%
+around with it okay all right I hope you
+ 
+
+00:07:57.520 --> 00:07:59.749 align:start position:0%
+around with it okay all right I hope you
+found<00:07:57.759><c> this</c><00:07:58.000><c> useful</c><00:07:58.319><c> to</c><00:07:58.560><c> just</c><00:07:58.800><c> get</c><00:07:58.960><c> started</c>
+
+00:07:59.749 --> 00:07:59.759 align:start position:0%
+found this useful to just get started
+ 
+
+00:07:59.759 --> 00:08:01.749 align:start position:0%
+found this useful to just get started
+and<00:08:00.080><c> the</c><00:08:00.400><c> remaining</c><00:08:00.720><c> three</c><00:08:00.960><c> videos</c><00:08:01.440><c> uh</c><00:08:01.520><c> by</c><00:08:01.680><c> the</c>
+
+00:08:01.749 --> 00:08:01.759 align:start position:0%
+and the remaining three videos uh by the
+ 
+
+00:08:01.759 --> 00:08:03.110 align:start position:0%
+and the remaining three videos uh by the
+way<00:08:01.919><c> in</c><00:08:02.000><c> this</c><00:08:02.240><c> same</c><00:08:02.400><c> lesson</c><00:08:02.720><c> you're</c><00:08:02.960><c> going</c><00:08:03.039><c> to</c>
+
+00:08:03.110 --> 00:08:03.120 align:start position:0%
+way in this same lesson you're going to
+ 
+
+00:08:03.120 --> 00:08:05.189 align:start position:0%
+way in this same lesson you're going to
+see<00:08:03.759><c> uh</c><00:08:03.919><c> go</c><00:08:04.080><c> through</c><00:08:04.240><c> the</c><00:08:04.400><c> code</c><00:08:04.720><c> walk</c><00:08:04.879><c> through</c>
+
+00:08:05.189 --> 00:08:05.199 align:start position:0%
+see uh go through the code walk through
+ 
+
+00:08:05.199 --> 00:08:06.790 align:start position:0%
+see uh go through the code walk through
+first<00:08:05.360><c> one</c><00:08:05.599><c> pre-processing</c><00:08:06.319><c> We'll</c><00:08:06.560><c> do</c><00:08:06.560><c> a</c><00:08:06.720><c> lot</c>
+
+00:08:06.790 --> 00:08:06.800 align:start position:0%
+first one pre-processing We'll do a lot
+ 
+
+00:08:06.800 --> 00:08:09.270 align:start position:0%
+first one pre-processing We'll do a lot
+more<00:08:06.960><c> detail</c><00:08:07.360><c> dive</c><00:08:07.680><c> into</c><00:08:07.919><c> that.</c><00:08:08.560><c> Then</c><00:08:08.800><c> we</c><00:08:08.960><c> do</c><00:08:09.039><c> a</c>
+
+00:08:09.270 --> 00:08:09.280 align:start position:0%
+more detail dive into that. Then we do a
+ 
+
+00:08:09.280 --> 00:08:11.110 align:start position:0%
+more detail dive into that. Then we do a
+highle<00:08:09.840><c> code</c><00:08:10.160><c> walk</c><00:08:10.400><c> through</c><00:08:10.560><c> of</c><00:08:10.720><c> the</c><00:08:10.879><c> entire</c>
+
+00:08:11.110 --> 00:08:11.120 align:start position:0%
+highle code walk through of the entire
+ 
+
+00:08:11.120 --> 00:08:13.029 align:start position:0%
+highle code walk through of the entire
+training<00:08:11.440><c> pipeline</c><00:08:12.240><c> which</c><00:08:12.479><c> also</c><00:08:12.639><c> ends</c><00:08:12.879><c> up</c>
+
+00:08:13.029 --> 00:08:13.039 align:start position:0%
+training pipeline which also ends up
+ 
+
+00:08:13.039 --> 00:08:14.950 align:start position:0%
+training pipeline which also ends up
+with<00:08:13.199><c> the</c><00:08:13.280><c> saving</c><00:08:13.599><c> of</c><00:08:13.759><c> the</c><00:08:14.000><c> adaptors.</c><00:08:14.800><c> And</c>
+
+00:08:14.950 --> 00:08:14.960 align:start position:0%
+with the saving of the adaptors. And
+ 
+
+00:08:14.960 --> 00:08:16.309 align:start position:0%
+with the saving of the adaptors. And
+then<00:08:15.120><c> the</c><00:08:15.280><c> last</c><00:08:15.440><c> video,</c><00:08:15.680><c> the</c><00:08:15.840><c> fourth</c><00:08:16.080><c> video</c>
+
+00:08:16.309 --> 00:08:16.319 align:start position:0%
+then the last video, the fourth video
+ 
+
+00:08:16.319 --> 00:08:18.309 align:start position:0%
+then the last video, the fourth video
+will<00:08:16.560><c> be</c><00:08:16.960><c> uh</c><00:08:17.120><c> the</c><00:08:17.360><c> evaluation</c><00:08:17.840><c> pipeline</c><00:08:18.160><c> which</c>
+
+00:08:18.309 --> 00:08:18.319 align:start position:0%
+will be uh the evaluation pipeline which
+ 
+
+00:08:18.319 --> 00:08:19.909 align:start position:0%
+will be uh the evaluation pipeline which
+is<00:08:18.479><c> pretty</c><00:08:18.720><c> straightforward</c><00:08:19.120><c> in</c><00:08:19.360><c> that</c><00:08:19.520><c> case.</c>
+
+00:08:19.909 --> 00:08:19.919 align:start position:0%
+is pretty straightforward in that case.
+ 
+
+00:08:19.919 --> 00:08:21.830 align:start position:0%
+is pretty straightforward in that case.
+Okay.<00:08:20.560><c> Uh</c><00:08:20.960><c> we'll</c><00:08:21.199><c> see</c><00:08:21.360><c> you</c><00:08:21.440><c> in</c><00:08:21.520><c> the</c><00:08:21.680><c> next</c>
+
+00:08:21.830 --> 00:08:21.840 align:start position:0%
+Okay. Uh we'll see you in the next
+ 
+
+00:08:21.840 --> 00:08:25.199 align:start position:0%
+Okay. Uh we'll see you in the next
+video.<00:08:22.160><c> Thank</c><00:08:22.319><c> you.</c><00:08:22.479><c> Bye.</c>
+
